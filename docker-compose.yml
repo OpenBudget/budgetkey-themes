@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  item:
+    environment:
+    - BASE_PATH=/item/
+    image: 'budgetkey/budgetkey-app-generic-item:latest'
+
+  search:
+    image: 'orihoch/budgetkey-app-search:procure'
+
+  nginx:
+    image: nginx:alpine
+    ports:
+    - 8080:80
+    volumes:
+    - ./nginx-conf-d:/etc/nginx/conf.d
