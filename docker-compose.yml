@@ -5,10 +5,14 @@ services:
   item:
     environment:
     - BASE_PATH=/item/
-    image: 'budgetkey/budgetkey-app-generic-item:latest'
+    image: 'orihoch/budgetkey-app-generic-item:procure'
+    volumes:
+    - ./theme.js:/app/dist/assets/theme.js
 
   search:
     image: 'orihoch/budgetkey-app-search:procure'
+    volumes:
+    - ./theme.js:/app/dist/assets/theme.js
 
   nginx:
     image: nginx:alpine
