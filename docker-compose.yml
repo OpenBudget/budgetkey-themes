@@ -2,17 +2,27 @@ version: "3"
 
 services:
 
+  govbuy-theme:
+    build: .
+    image: orihoch/open-procure
+    volumes:
+    - ./govbuy-theme:/app/dist/assets
+
   item:
+    image: budgetkey/budgetkey-app-generic-item:latest
+    depends_on:
+    - govbuy-theme
     environment:
     - BASE_PATH=/item/
-    image: 'orihoch/budgetkey-app-generic-item:procure'
     volumes:
-    - ./theme.js:/app/dist/assets/theme.js
+    - ./govbuy-theme/theme.js:/app/dist/assets/theme.js
 
   search:
-    image: 'orihoch/budgetkey-app-search:procure'
+    image: orihoch/budgetkey-app-search:themes-support
+    depends_on:
+    - govbuy-theme
     volumes:
-    - ./theme.js:/app/dist/assets/theme.js
+    - ./govbuy-theme/theme.js:/app/dist/assets/theme.js
 
   nginx:
     image: nginx:alpine
