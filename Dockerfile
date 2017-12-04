@@ -1,9 +1,7 @@
 FROM alpine
 
-COPY theme.js /theme.js
+COPY theme.govbuy.json /theme.govbuy.json
 
-RUN mkdir -p /app/dist/assets/
+RUN mkdir -p /themes
 
-VOLUME /app/dist/assets/
-
-ENTRYPOINT ["cp", "-v", "/theme.js", "/app/dist/assets/theme.js"]
+ENTRYPOINT ["cp", "-v", "/theme.govbuy.json", "/themes/theme.govbuy.json"]
