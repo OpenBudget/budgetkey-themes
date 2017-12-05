@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  # allows distributing and updating the theme files to the apps using shared docker volumes
+  # it copies the theme to /themes directory which will be a shared volume storing all the themes to be used by the apps
+  govbuy-theme:
+    build: .
+    image: orihoch/open-procure
+    volumes:
+    - themes:/themes
+
+  item:
+    image: budgetkey/budgetkey-app-generic-item:latest
+    environment:
+    - BASE_PATH=/item/
+    volumes:
+    - themes:/themes
+
+  search:
+    image: orihoch/budgetkey-app-search:themes-support
+    volumes:
+    - themes:/theme
+
+  nginx:
+    image: nginx:alpine
+    ports:
+    - 8080:80
+    volumes:
+    - ./nginx-conf-d:/etc/nginx/conf.d
+
+volumes:
+  themes:
