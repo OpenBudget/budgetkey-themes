@@ -22,7 +22,15 @@ services:
     volumes:
     - themes:/theme
 
+  main:
+    image: orihoch/openprocure-app-main-page
+
   nginx:
+    depends_on:
+    - govbuy-theme
+    - item
+    - search
+    - main
     image: nginx:alpine
     ports:
     - 8080:80
