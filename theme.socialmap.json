@@ -1,0 +1,26 @@
+{
+  "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "themeId": "socialmap",
+    "siteUrl": "https://socialmap.org.il",
+    "siteLogo": "socialmap.svg",
+    "searchBarConfig": [
+      {
+        "name": "עמותות וחל״צ",
+        "id": "entities"
+      },
+      {
+        "name": "מחוזות",
+        "id": "reports",
+        "defaultTerm": "ארגונים הפעילים במחוז"
+      },
+      {
+        "name": "תחומי פעילות",
+        "id": "reports",
+        "defaultTerm": "ארגונים הפעילים בתחום"
+      }
+    ]
+  },
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "המפה החברתית"
+  }
+}

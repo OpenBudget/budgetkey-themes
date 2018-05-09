@@ -1,7 +1,7 @@
 FROM alpine
 
-COPY theme.govbuy.json /theme.govbuy.json
+COPY theme.*.json /
 
 RUN mkdir -p /themes
 
-ENTRYPOINT ["cp", "-v", "/theme.govbuy.json", "/themes/theme.govbuy.json"]
+ENTRYPOINT ["cp", "-v", "/theme.*.json", "/themes/"]
