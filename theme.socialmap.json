@@ -6,17 +6,23 @@
     "searchBarConfig": [
       {
         "name": "עמותות וחל״צ",
-        "id": "entities"
-      },
-      {
-        "name": "מחוזות",
-        "id": "reports",
-        "defaultTerm": "ארגונים הפעילים במחוז"
+        "id": "entities",
+        "rid": ["entities"],
+        "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'"
       },
       {
         "name": "תחומי פעילות",
         "id": "reports",
-        "defaultTerm": "ארגונים הפעילים בתחום"
+        "rid": ["reports"],
+        "defaultTerm": "ארגונים הפעילים בתחום",
+        "placeholder": "חפשו 'ארגונים פעילים בתחום…'"
+      },
+      {
+        "name": "מחוזות",
+        "id": "reports",
+        "rid": ["reports"],
+        "defaultTerm": "ארגונים הפעילים במחוז",
+        "placeholder": "חפשו 'ארגונים פעילים במחוז'"
       }
     ]
   },
