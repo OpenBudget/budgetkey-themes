@@ -24,7 +24,9 @@
         "defaultTerm": "ארגונים הפעילים במחוז",
         "placeholder": "חפשו 'ארגונים פעילים במחוז'"
       }
-    ]
+    ],
+    "supporters": ["midot", "migdal"],
+    "euDisclaimer": true
   },
   "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
     "siteName": "המפה החברתית"
