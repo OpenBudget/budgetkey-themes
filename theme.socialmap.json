@@ -25,8 +25,42 @@
         "placeholder": "חפשו 'ארגונים פעילים במחוז'"
       }
     ],
+    "footerLinks": [
+      {
+        "href": "mailto:info@hasadna.org.il",
+        "title": "צרו קשר"
+      },
+      {
+        "href": "https://forum.hasadna.org.il/c/eknights/obudget",
+        "title": "דווחו על תקלה"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey",
+        "title": "קוד האתר"
+      },
+      {
+        "href": "https://forum.hasadna.org.il/c/eknights/obudget",
+        "title": "קבוצת הדיון שלנו"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
+        "title": "API"
+      }
+    ],
+    "supporterInfos": {
+        "midot": {
+          "name": "מידות",
+          "logo": "midot.svg",
+          "url": "http://www.midot.org.il/"
+        },
+        "migdal": {
+          "name": "מגדל",
+          "logo": "migdal.svg",
+          "url": "https://www.migdal.co.il/He/MigdalTeam/social_involvment_migdal/Pages/social_inv.aspx"
+        }
+    },    
     "supporters": ["midot", "migdal"],
-    "euDisclaimer": true
+    "euDisclaimer": false
   },
   "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
     "siteName": "המפה החברתית"
