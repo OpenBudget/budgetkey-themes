@@ -20,7 +20,7 @@
         "defaultTerm": "ארגונים הפעילים בתחום",
         "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
         "filters": {
-          "kind": "field-of-activity"
+          "kind": "fieldofactivity"
         }
       },
       {
