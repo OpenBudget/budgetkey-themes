@@ -6,23 +6,32 @@
     "searchBarConfig": [
       {
         "name": "עמותות וחל״צ",
-        "id": "entities",
-        "rid": ["entities"],
-        "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'"
+        "id": "associations",
+        "types": ["entities"],
+        "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'",
+        "filters": {
+          "kind": "association"
+        }
       },
       {
         "name": "תחומי פעילות",
-        "id": "reports",
-        "rid": ["reports"],
+        "id": "field-of-activity-reports",
+        "types": ["reports"],
         "defaultTerm": "ארגונים הפעילים בתחום",
-        "placeholder": "חפשו 'ארגונים פעילים בתחום…'"
+        "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
+        "filters": {
+          "kind": "field-of-activity"
+        }
       },
       {
         "name": "מחוזות",
-        "id": "reports",
-        "rid": ["reports"],
+        "id": "district-reports",
+        "types": ["reports"],
         "defaultTerm": "ארגונים הפעילים במחוז",
-        "placeholder": "חפשו 'ארגונים פעילים במחוז'"
+        "placeholder": "חפשו 'ארגונים פעילים במחוז'",
+        "filters": {
+          "kind": "district"
+        }
       }
     ],
     "footerLinks": [
