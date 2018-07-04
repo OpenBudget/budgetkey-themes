@@ -11,7 +11,116 @@
         "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'",
         "filters": {
           "kind": "association"
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "org_kind",
+            "display": "סוג ארגון",
+            "options": [
+              {
+                "id": "all",
+                "display": "כל הסוגים"
+              },
+              {
+                "id": "associations",
+                "display": "עמותות",
+                "filters": {
+                  "details.org_kind": "עמותה"
+                }
+              },
+              {
+                "id": "public_good_companies",
+                "display": "חברות לתועלת הציבור",
+                "filters": {
+                  "details.org_kind": "חל\"צ"
+                }
+              }
+            ]
+          },
+          {
+            "id": "region",
+            "display": "אזור פעילות",
+            "options": [
+              {
+                "id": "all",
+                "display": "כל המחוזות"
+              },
+              {
+                "id": "north",
+                "display": "מחוז צפון",
+                "filters": {
+                  "details.activity_region_districts": "הצפון"
+                }
+              },
+              {
+                "id": "center",
+                "display": "מחוז מרכז",
+                "filters": {
+                  "details.activity_region_districts": "המרכז"
+                }
+              },
+              {
+                "id": "south",
+                "display": "מחוז דרום",
+                "filters": {
+                  "details.activity_region_districts": "הדרום"
+                }
+              },
+              {
+                "id": "tel-aviv",
+                "display": "מחוז תל אביב - יפו",
+                "filters": {
+                  "details.activity_region_districts": "אביב"
+                }
+              },
+              {
+                "id": "jerusalem",
+                "display": "מחוז ירושלים",
+                "filters": {
+                  "details.activity_region_districts": "ירושלים"
+                }
+              },
+              {
+                "id": "haifa",
+                "display": "מחוז חיפה",
+                "filters": {
+                  "details.activity_region_districts": "חיפה"
+                }
+              },
+              {
+                "id": "yosh",
+                "display": "מחוז יו״ש",
+                "filters": {
+                  "details.activity_region_districts": "והשומרון"
+                }
+              }
+            ]
+          },
+          {
+            "id": "creds",
+            "display": "אישורים",
+            "options": [
+              {
+                "id": "all",
+                "display": "ללא הגבלה"
+              },
+              {
+                "id": "proper_management",
+                "display": "בעלי אישור ניהול תקין",
+                "filters": {
+                  "details.proper_management": "יש"
+                }
+              },
+              {
+                "id": "article46",
+                "display": "בעלי אישור בסעיף 46",
+                "filters": {
+                  "details.has_article_46": "יש"
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "תחומי פעילות",

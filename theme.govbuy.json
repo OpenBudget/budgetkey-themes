@@ -19,7 +19,43 @@
         "placeholder": "חפשו מידע על מכרזים",
         "filters": {
           "tender_type": ["central", "office"]
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "__created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "__created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]
       },
       {
         "name": "מכרזים מרכזיים",
