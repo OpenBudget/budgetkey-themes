@@ -64,7 +64,43 @@
         "placeholder": "חפשו מידע על מכרזים מרכזיים",
         "filters": {
           "tender_type": "central"
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "__created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "__created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]
       },
       {
         "name": "מכרזים משרדיים",
@@ -73,7 +109,43 @@
         "placeholder": "חפשו מידע על מכרזים משרדיים",
         "filters": {
           "tender_type": "office"
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "__created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "__created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]
       },
       {
         "name": "פטור ממכרז",
@@ -82,7 +154,35 @@
         "placeholder": "חפשו מידע על הודעות פטור ממכרז",
         "filters": {
           "tender_type": "exemptions"
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "new",
+                "display": "חדשות",
+                "filters": {
+                  "__created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "__created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]
       },
       {
         "name": "התקשרויות",
@@ -90,7 +190,26 @@
         "types": ["contract-spending"],
         "placeholder": "חפשו מידע על התקשרויות",
         "filters": {
-        }
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "new",
+                "display": "חדשות",
+                "filters": {
+                  "__created_at__gte": "now-3m"
+                }
+              }
+            ] 
+          }
+        ]
       }
     ],
     "footerLinks": [
