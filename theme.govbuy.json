@@ -41,7 +41,7 @@
                 "id": "new",
                 "display": "חדשים",
                 "filters": {
-                  "__created_at__gte": "now-1w"
+                  "rev_created_at__gte": "now-1w"
                 }
               },
               {
@@ -50,7 +50,14 @@
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
-                  "__created_at__lte": "now-1w"
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
                 }
               }
             ] 
@@ -86,7 +93,7 @@
                 "id": "new",
                 "display": "חדשים",
                 "filters": {
-                  "__created_at__gte": "now-1w"
+                  "rev_created_at__gte": "now-1w"
                 }
               },
               {
@@ -95,7 +102,14 @@
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
-                  "__created_at__lte": "now-1w"
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
                 }
               }
             ] 
@@ -131,7 +145,7 @@
                 "id": "new",
                 "display": "חדשים",
                 "filters": {
-                  "__created_at__gte": "now-1w"
+                  "rev_created_at__gte": "now-1w"
                 }
               },
               {
@@ -140,7 +154,14 @@
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
-                  "__created_at__lte": "now-1w"
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
                 }
               }
             ] 
@@ -168,7 +189,7 @@
                 "id": "new",
                 "display": "חדשות",
                 "filters": {
-                  "__created_at__gte": "now-1w"
+                  "rev_created_at__gte": "now-1w"
                 }
               },
               {
@@ -177,7 +198,14 @@
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
-                  "__created_at__lte": "now-1w"
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "עוד לא אושרו",
+                "filters": {
+                  "claim_date__gte": "now"
                 }
               }
             ] 
@@ -204,7 +232,14 @@
                 "id": "new",
                 "display": "חדשות",
                 "filters": {
-                  "__created_at__gte": "now-3m"
+                  "rev_created_at__gte": "now-3m"
+                }
+              },
+              {
+                "id": "active",
+                "display": "פעילות",
+                "filters": {
+                  "contract_is_active": true
                 }
               }
             ] 
