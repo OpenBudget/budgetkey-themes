@@ -175,6 +175,12 @@
         }
       }
     ],
+    "headerLinks": [
+      {
+        "href": "/about/?theme=socialmap",
+        "title": "מי אנחנו"
+      }
+    ],
     "footerLinks": [
       {
         "href": "mailto:info@hasadna.org.il",

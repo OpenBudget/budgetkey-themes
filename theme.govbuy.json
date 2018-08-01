@@ -247,6 +247,12 @@
         ]
       }
     ],
+    "headerLinks": [
+      {
+        "href": "/about/?theme=govbuy",
+        "title": "מי אנחנו"
+      }
+    ],
     "footerLinks": [
       {
         "href": "mailto:info@hasadna.org.il",
