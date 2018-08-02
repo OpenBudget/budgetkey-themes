@@ -8,7 +8,7 @@
         "name": "הכל",
         "id": "all",
         "types": ["tenders", "contract-spending"],
-        "placeholder": "חפשו מידע על מכרזים או התקשרויות'",
+        "placeholder": "חפשו מידע על מכרזים או התקשרויות",
         "filters": {
         }
       },
@@ -255,40 +255,38 @@
     ],
     "footerLinks": [
       {
-        "href": "mailto:info@hasadna.org.il",
-        "title": "צרו קשר"
+        "href": "/about?theme=govbuy",
+        "title": "אודות"
       },
       {
-        "href": "https://forum.hasadna.org.il/c/eknights/obudget",
-        "title": "דווחו על תקלה"
-      },
-      {
-        "href": "https://github.com/OpenBudget/BudgetKey",
-        "title": "קוד האתר"
-      },
-      {
-        "href": "https://forum.hasadna.org.il/c/eknights/obudget",
-        "title": "קבוצת הדיון שלנו"
+        "href": "/about?theme=govbuy#team",
+        "title": "הצוות"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
         "title": "API"
+      },
+      {
+        "href": "https://old.obudget.org",
+        "title": "האתר הישן"
+      },
+      {
+        "href": "mailto:info@hasadna.org.il",
+        "title": "צרו קשר"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
+        "title": "דווחו על תקלה"
+      },
+      {
+        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
+        "title": "מדיניות פרטיות"
+      },
+      {
+        "href": "/about?theme=govbuy#privacy",
+        "title": "תרמו לנו"
       }
-    ],
-    "supporterInfos": {
-        "midot": {
-          "name": "מידות",
-          "logo": "midot.svg",
-          "url": "http://www.midot.org.il/"
-        },
-        "migdal": {
-          "name": "מגדל",
-          "logo": "migdal.svg",
-          "url": "https://www.migdal.co.il/He/MigdalTeam/social_involvment_migdal/Pages/social_inv.aspx"
-        }
-    },    
-    "supporters": [],
-    "euDisclaimer": false
+    ]
   },
   "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
     "siteName": "רכש פתוח"
