@@ -155,21 +155,21 @@
         ]
       },
       {
-        "name": "תחומי פעילות",
+        "name": "Areas of Activity",
         "id": "field-of-activity-reports",
         "types": ["reports"],
-        "defaultTerm": "ארגונים הפעילים בתחום",
-        "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
+        "defaultTerm": "Active organizations in the area",
+        "placeholder": "Search for active organizations in the area",
         "filters": {
           "kind": "fieldofactivity"
         }
       },
       {
-        "name": "מחוזות",
+        "name": "Districts",
         "id": "district-reports",
         "types": ["reports"],
-        "defaultTerm": "ארגונים הפעילים במחוז",
-        "placeholder": "חפשו 'ארגונים פעילים במחוז'",
+        "defaultTerm": "Organizations active in district",
+        "placeholder": "Search for active organizations in the district",
         "filters": {
           "kind": "district"
         }
