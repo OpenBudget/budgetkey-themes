@@ -1,0 +1,294 @@
+{
+  "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "themeId": "govbuy",
+    "siteUrl": "https://next.obudget.org/govbuy/",
+    "siteLogo": "open_procure_logo.svg",
+    "searchBarConfig": [
+      {
+        "name": "הכל",
+        "id": "all",
+        "types": ["tenders", "contract-spending"],
+        "placeholder": "חפשו מידע על מכרזים או התקשרויות",
+        "filters": {
+        }
+      },
+      {
+        "name": "מכרזים",
+        "id": "tenders",
+        "types": ["tenders"],
+        "placeholder": "חפשו מידע על מכרזים",
+        "filters": {
+          "tender_type": ["central", "office"]
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
+                }
+              }
+            ] 
+          }
+        ]
+      },
+      {
+        "name": "מכרזים מרכזיים",
+        "id": "central-tenders",
+        "types": ["tenders"],
+        "placeholder": "חפשו מידע על מכרזים מרכזיים",
+        "filters": {
+          "tender_type": "central"
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
+                }
+              }
+            ] 
+          }
+        ]
+      },
+      {
+        "name": "מכרזים משרדיים",
+        "id": "office-tenders",
+        "types": ["tenders"],
+        "placeholder": "חפשו מידע על מכרזים משרדיים",
+        "filters": {
+          "tender_type": "office"
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
+                }
+              }
+            ] 
+          }
+        ]
+      },
+      {
+        "name": "פטור ממכרז",
+        "id": "exemptions",
+        "types": ["tenders"],
+        "placeholder": "חפשו מידע על הודעות פטור ממכרז",
+        "filters": {
+          "tender_type": "exemptions"
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "new",
+                "display": "חדשות",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "עוד לא אושרו",
+                "filters": {
+                  "claim_date__gte": "now"
+                }
+              }
+            ] 
+          }
+        ]
+      },
+      {
+        "name": "התקשרויות",
+        "id": "contracts",
+        "types": ["contract-spending"],
+        "placeholder": "חפשו מידע על התקשרויות",
+        "filters": {
+        },
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "new",
+                "display": "חדשות",
+                "filters": {
+                  "rev_created_at__gte": "now-3m"
+                }
+              },
+              {
+                "id": "active",
+                "display": "פעילות",
+                "filters": {
+                  "contract_is_active": true
+                }
+              }
+            ] 
+          }
+        ]
+      }
+    ],
+    "headerLinks": [
+      {
+        "href": "/about/?theme=govbuy",
+        "title": "מי אנחנו"
+      }
+    ],
+    "footerLinks": [
+      {
+        "href": "/about?theme=govbuy",
+        "title": "אודות"
+      },
+      {
+        "href": "/about?theme=govbuy#team",
+        "title": "הצוות"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
+        "title": "API"
+      },
+      {
+        "href": "https://old.obudget.org",
+        "title": "האתר הישן"
+      },
+      {
+        "href": "mailto:info@hasadna.org.il",
+        "title": "צרו קשר"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
+        "title": "דווחו על תקלה"
+      },
+      {
+        "href": "/about?theme=govbuy#privacy",
+        "title": "מדיניות פרטיות"
+      },
+      {
+        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
+        "title": "תרמו לנו"
+      }
+    ]
+  },
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "רכש פתוח"
+  }
+}
