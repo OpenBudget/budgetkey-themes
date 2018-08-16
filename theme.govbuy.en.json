@@ -127,7 +127,7 @@
         "filterMenu": [
           {
             "id": "focused",
-            "display": "חיפוש ממוקד",
+            "display": "Focused Search",
             "options": [
               {
                 "id": "no",
