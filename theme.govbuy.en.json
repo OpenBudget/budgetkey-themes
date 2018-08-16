@@ -23,15 +23,15 @@
         "filterMenu": [
           {
             "id": "focused",
-            "display": "חיפוש ממוקד",
+            "display": "Focused Search",
             "options": [
               {
                 "id": "no",
-                "display": "ללא"
+                "display": "no"
               },
               {
                 "id": "closing",
-                "display": "נסגרים בקרוב",
+                "display": "closing",
                 "filters": {
                   "claim_date__lte": "now+1w",
                   "claim_date__gte": "now"
@@ -39,14 +39,14 @@
               },
               {
                 "id": "new",
-                "display": "חדשים",
+                "display": "new",
                 "filters": {
                   "rev_created_at__gte": "now-1w"
                 }
               },
               {
                 "id": "updated",
-                "display": "התעדכנו לאחרונה",
+                "display": "Recently Updated",
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
@@ -55,7 +55,7 @@
               },
               {
                 "id": "open",
-                "display": "פתוחים",
+                "display": "Open",
                 "filters": {
                   "claim_date__gte": "now"
                 }
@@ -75,15 +75,15 @@
         "filterMenu": [
           {
             "id": "focused",
-            "display": "חיפוש ממוקד",
+            "display": "Focused Search",
             "options": [
               {
                 "id": "no",
-                "display": "ללא"
+                "display": "no"
               },
               {
                 "id": "closing",
-                "display": "נסגרים בקרוב",
+                "display": "closing",
                 "filters": {
                   "claim_date__lte": "now+1w",
                   "claim_date__gte": "now"
@@ -91,14 +91,14 @@
               },
               {
                 "id": "new",
-                "display": "חדשים",
+                "display": "new",
                 "filters": {
                   "rev_created_at__gte": "now-1w"
                 }
               },
               {
                 "id": "updated",
-                "display": "התעדכנו לאחרונה",
+                "display": "Recently Updated",
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
@@ -107,7 +107,7 @@
               },
               {
                 "id": "open",
-                "display": "פתוחים",
+                "display": "Open",
                 "filters": {
                   "claim_date__gte": "now"
                 }
@@ -179,22 +179,30 @@
         "filterMenu": [
           {
             "id": "focused",
-            "display": "חיפוש ממוקד",
+            "display": "Focused Search",
             "options": [
               {
                 "id": "no",
-                "display": "ללא"
+                "display": "no"
+              },
+              {
+                "id": "closing",
+                "display": "closing",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
               },
               {
                 "id": "new",
-                "display": "חדשות",
+                "display": "new",
                 "filters": {
                   "rev_created_at__gte": "now-1w"
                 }
               },
               {
                 "id": "updated",
-                "display": "התעדכנו לאחרונה",
+                "display": "Recently Updated",
                 "filters": {
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w",
@@ -203,7 +211,7 @@
               },
               {
                 "id": "open",
-                "display": "עוד לא אושרו",
+                "display": "Open",
                 "filters": {
                   "claim_date__gte": "now"
                 }
@@ -222,24 +230,41 @@
         "filterMenu": [
           {
             "id": "focused",
-            "display": "חיפוש ממוקד",
+            "display": "Focused Search",
             "options": [
               {
                 "id": "no",
-                "display": "ללא"
+                "display": "no"
               },
               {
-                "id": "new",
-                "display": "חדשות",
+                "id": "closing",
+                "display": "closing",
                 "filters": {
-                  "rev_created_at__gte": "now-3m"
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
                 }
               },
               {
-                "id": "active",
-                "display": "פעילות",
+                "id": "new",
+                "display": "new",
                 "filters": {
-                  "contract_is_active": true
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "Recently Updated",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              },
+              {
+                "id": "open",
+                "display": "Open",
+                "filters": {
+                  "claim_date__gte": "now"
                 }
               }
             ] 
