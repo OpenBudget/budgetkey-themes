@@ -2,7 +2,7 @@
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "govbuy",
     "siteUrl": "https://next.obudget.org/govbuy/",
-    "siteLogo": "open_procure_logo.svg",
+    "siteLogo": "govbuy.svg",
     "searchBarConfig": [
       {
         "name": "הכל",
