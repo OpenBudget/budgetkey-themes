@@ -59,6 +59,13 @@
                 "filters": {
                   "claim_date__gte": "now"
                 }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
+                }
               }
             ] 
           }
@@ -111,6 +118,13 @@
                 "filters": {
                   "claim_date__gte": "now"
                 }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
+                }
               }
             ] 
           }
@@ -162,6 +176,13 @@
                 "display": "פתוחים",
                 "filters": {
                   "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
                 }
               }
             ] 
