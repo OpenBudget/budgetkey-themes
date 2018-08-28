@@ -7,8 +7,8 @@
       {
         "name": "הכל",
         "id": "all",
-        "types": ["tenders", "contract-spending"],
-        "placeholder": "חפשו מידע על מכרזים או התקשרויות",
+        "types": ["tenders", "contract-spending", "entities"],
+        "placeholder": "חפשו מידע על מכרזים, התקשרויות או ספקים",
         "filters": {
         }
       },
@@ -266,7 +266,34 @@
             ] 
           }
         ]
-      }
+      },
+      {
+        "name": "ספקים",
+        "id": "entities",
+        "types": ["entities"],
+        "placeholder": "חפשו מידע על ספקים",
+        "filters": {
+        },
+        "filterMenu": [
+          {
+            "id": "active",
+            "display": "פעילות",
+            "options": [
+              {
+                "id": "no",
+                "display": "כל הארגונים"
+              },
+              {
+                "id": "yes",
+                "display": "רק ספקים פעילים",
+                "filters": {
+                  "received_amount_contracts__gt": 0
+                }
+              }
+            ] 
+          }
+        ]
+      }    
     ],
     "headerLinks": [
       {
