@@ -125,6 +125,13 @@
                 "filters": {
                   "simple_decision": "עתידי"
                 }
+              },
+              {
+                "id": "closed",
+                "display": "סגורים",
+                "filters": {
+                  "simple_decision": "סגור"
+                }
               }
             ] 
           }
@@ -183,6 +190,13 @@
                 "display": "עתידיים",
                 "filters": {
                   "simple_decision": "עתידי"
+                }
+              },
+              {
+                "id": "closed",
+                "display": "סגורים",
+                "filters": {
+                  "simple_decision": "סגור"
                 }
               }
             ] 
