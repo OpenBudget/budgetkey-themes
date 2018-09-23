@@ -3,6 +3,7 @@
     "themeId": "socialmap",
     "siteUrl": "https://socialmap.org.il",
     "siteLogo": "socialmap.svg",
+    "disableAuth": true,
     "sampleSearches": [
       "ארגונים פעילים בתחום יוזמות עסקיות", 
       "הנוער העובד והלומד",
