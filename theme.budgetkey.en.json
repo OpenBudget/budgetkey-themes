@@ -1,0 +1,227 @@
+{
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "The Budget Key"
+  },
+  "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "footerLinks": [
+      {
+        "href": "/about",
+        "title": "אודות"
+      },
+      {
+        "href": "/about#team",
+        "title": "הצוות"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
+        "title": "API"
+      },
+      {
+        "href": "https://old.obudget.org",
+        "title": "האתר הישן"
+      },
+      {
+        "href": "mailto:info@hasadna.org.il",
+        "title": "צרו קשר"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
+        "title": "דווחו על תקלה"
+      },
+      {
+        "href": "/about#privacy",
+        "title": "מדיניות פרטיות"
+      },
+      {
+        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
+        "title": "תרמו לנו"
+      }
+    ],
+    "headerLinks": [
+      {
+        "href": "/about/",
+        "title": "מי אנחנו"
+      },
+      {
+        "href": "http://www.hasadna.org.il/%D7%9E%D7%A4%D7%AA%D7%97-%D7%94%D7%AA%D7%A7%D7%A6%D7%99%D7%91/",
+        "title": "הסדנא"
+      },
+      {
+        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
+        "title": "תרמו לנו"
+      }
+    ],
+    "searchBarConfig": [
+      {
+        "id": "all",
+        "main": true,
+        "name": "All",
+        "placeholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם...",
+        "types": [
+          "all"
+        ]
+      },
+      {
+        "defaultTerm": "משרד",
+        "id": "budget",
+        "name": "סעיפים תקציביים",
+        "placeholder": "חפשו שמות של סעיפים ותקנות תקציביות...",
+        "types": [
+          "budget"
+        ]
+      },
+      {
+        "filterMenu": [
+          {
+            "display": "סוג הארגון",
+            "id": "entity_kind",
+            "options": [
+              {
+                "display": "כל סוגי הארגונים",
+                "id": "all"
+              },
+              {
+                "display": "חברות",
+                "filters": {
+                  "kind": "company"
+                },
+                "id": "companies"
+              },
+              {
+                "display": "עמותות וחל״צ",
+                "filters": {
+                  "kind": "association"
+                },
+                "id": "associations"
+              },
+              {
+                "display": "רשויות מקומיות",
+                "filters": {
+                  "kind": "municipality"
+                },
+                "id": "municipalities"
+              },
+              {
+                "display": "ארגונים אחרים",
+                "filters": {
+                  "kind__not": [
+                    "company",
+                    "association",
+                    "municipality"
+                  ]
+                },
+                "id": "other"
+              }
+            ]
+          },
+          {
+            "display": "כספי מדינה",
+            "id": "public_funds",
+            "options": [
+              {
+                "display": "ללא הגבלה",
+                "id": "all"
+              },
+              {
+                "display": "קיבלו תמיכה ממשלתית",
+                "filters": {
+                  "received_amount_supports__gt": 0
+                },
+                "id": "supported"
+              },
+              {
+                "display": "סיפקו שירותים לממשלה",
+                "filters": {
+                  "received_amount_contracts__gt": 0
+                },
+                "id": "contracted"
+              },
+              {
+                "display": "גם וגם",
+                "filters": {
+                  "received_amount_contracts__gt": 0,
+                  "received_amount_supports__gt": 0
+                },
+                "id": "both"
+              }
+            ]
+          }
+        ],
+        "id": "entities",
+        "name": "ארגונים",
+        "placeholder": "חפשו פרטים של חברות, עמותות וארגונים אחרים...",
+        "types": [
+          "entities"
+        ]
+      },
+      {
+        "id": "national-budget-changes",
+        "name": "העברות תקציביות",
+        "placeholder": "חפשו פרטים על העברות תקציביות...",
+        "types": [
+          "national-budget-changes"
+        ]
+      },
+      {
+        "id": "supports",
+        "name": "תמיכות והעברות",
+        "placeholder": "חפשו פרטים על תמיכות תקציביות...",
+        "types": [
+          "supports"
+        ]
+      },
+      {
+        "filterMenu": [
+          {
+            "display": "סוג התהליך",
+            "id": "tender_type",
+            "options": [
+              {
+                "display": "הכל",
+                "id": "all"
+              },
+              {
+                "display": "מכרזים",
+                "filters": {
+                  "_type": "tenders",
+                  "tender_type": [
+                    "office",
+                    "central"
+                  ]
+                },
+                "id": "tenders"
+              },
+              {
+                "display": "בקשות פטור ממכרז",
+                "filters": {
+                  "_type": "tenders",
+                  "tender_type": [
+                    "exemptions"
+                  ]
+                },
+                "id": "exemptions"
+              },
+              {
+                "display": "התקשרויות",
+                "filters": {
+                  "_type": "contract-spending"
+                },
+                "id": "contracts"
+              }
+            ]
+          }
+        ],
+        "id": "procurement",
+        "name": "מכרזים והתקשרויות",
+        "placeholder": "חפשו פרטים על מכרזים, פשטורים ממכרז והתקשרויות ממשלתיות...",
+        "types": [
+          "tenders",
+          "contract-spending"
+        ]
+      }
+    ],
+    "searchPlaceholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם..",
+    "siteLogo": "budgetkey.svg",
+    "siteUrl": "https://next.obudget.org"
+  }
+}

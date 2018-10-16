@@ -2,13 +2,13 @@
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "govbuy",
     "siteUrl": "https://next.obudget.org/govbuy/",
-    "siteLogo": "open_procure_logo.svg",
+    "siteLogo": "govbuy.svg",
     "searchBarConfig": [
       {
         "name": "הכל",
         "id": "all",
-        "types": ["tenders", "contract-spending"],
-        "placeholder": "חפשו מידע על מכרזים או התקשרויות",
+        "types": ["tenders", "contract-spending", "entities"],
+        "placeholder": "חפשו מידע על מכרזים, התקשרויות או ספקים",
         "filters": {
         }
       },
@@ -58,6 +58,20 @@
                 "display": "פתוחים",
                 "filters": {
                   "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
+                }
+              },
+              {
+                "id": "closed",
+                "display": "סגורים",
+                "filters": {
+                  "simple_decision": "סגור"
                 }
               }
             ] 
@@ -111,6 +125,20 @@
                 "filters": {
                   "claim_date__gte": "now"
                 }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
+                }
+              },
+              {
+                "id": "closed",
+                "display": "סגורים",
+                "filters": {
+                  "simple_decision": "סגור"
+                }
               }
             ] 
           }
@@ -162,6 +190,20 @@
                 "display": "פתוחים",
                 "filters": {
                   "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "future",
+                "display": "עתידיים",
+                "filters": {
+                  "simple_decision": "עתידי"
+                }
+              },
+              {
+                "id": "closed",
+                "display": "סגורים",
+                "filters": {
+                  "simple_decision": "סגור"
                 }
               }
             ] 
@@ -245,7 +287,34 @@
             ] 
           }
         ]
-      }
+      },
+      {
+        "name": "ספקים",
+        "id": "entities",
+        "types": ["entities"],
+        "placeholder": "חפשו מידע על ספקים",
+        "filters": {
+        },
+        "filterMenu": [
+          {
+            "id": "active",
+            "display": "פעילות",
+            "options": [
+              {
+                "id": "no",
+                "display": "כל הארגונים"
+              },
+              {
+                "id": "yes",
+                "display": "רק ספקים פעילים",
+                "filters": {
+                  "received_amount_contracts__gt": 0
+                }
+              }
+            ] 
+          }
+        ]
+      }    
     ],
     "headerLinks": [
       {

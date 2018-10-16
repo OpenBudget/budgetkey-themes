@@ -3,6 +3,12 @@
     "themeId": "socialmap",
     "siteUrl": "https://socialmap.org.il",
     "siteLogo": "socialmap.svg",
+    "disableAuth": true,
+    "sampleSearches": [
+      "ארגונים פעילים בתחום יוזמות עסקיות", 
+      "הנוער העובד והלומד",
+      "ארגונים הפעילים במחוז הדרום"
+    ],
     "searchBarConfig": [
       {
         "name": "עמותות וחל״צ",
@@ -177,11 +183,23 @@
     ],
     "headerLinks": [
       {
-        "href": "/about/?theme=socialmap",
+        "href": "https://next.obudget.org/about/?theme=socialmap",
         "title": "מי אנחנו"
       }
     ],
     "footerLinks": [
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap",
+        "title": "אודות"
+      },
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap#team",
+        "title": "הצוות"
+      },
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap#privacy",
+        "title": "מדיניות פרטיות"
+      },
       {
         "href": "mailto:info@hasadna.org.il",
         "title": "צרו קשר"

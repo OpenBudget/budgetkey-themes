@@ -1,224 +1,251 @@
 {
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "The Social Map"
+  },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
-    "themeId": "socialmap",
-    "siteUrl": "https://socialmap.org.il",
-    "siteLogo": "socialmap.svg",
-    "searchBarConfig": [
-      {
-        "name": "Non-Profit Organizations",
-        "id": "associations",
-        "types": ["entities"],
-        "placeholder": "Search for names of associations or public benefit companies'",
-        "filters": {
-          "kind": "association"
-        },
-        "filterMenu": [
-          {
-            "id": "org_kind",
-            "display": "Type of Organization",
-            "options": [
-              {
-                "id": "all",
-                "display": "All"
-              },
-              {
-                "id": "associations",
-                "display": "Associations",
-                "filters": {
-                  "details.org_kind": "עמותה"
-                }
-              },
-              {
-                "id": "public_good_companies",
-                "display": "Public good companies",
-                "filters": {
-                  "details.org_kind": "חל\"צ"
-                }
-              }
-            ]
-          },
-          {
-            "id": "region",
-            "display": "Region",
-            "options": [
-              {
-                "id": "all",
-                "display": "All"
-              },
-              {
-                "id": "north",
-                "display": "North",
-                "filters": {
-                  "details.activity_region_districts": "הצפון"
-                }
-              },
-              {
-                "id": "center",
-                "display": "Central",
-                "filters": {
-                  "details.activity_region_districts": "המרכז"
-                }
-              },
-              {
-                "id": "south",
-                "display": "South",
-                "filters": {
-                  "details.activity_region_districts": "הדרום"
-                }
-              },
-              {
-                "id": "tel-aviv",
-                "display": "Tel Aviv-Yafo",
-                "filters": {
-                  "details.activity_region_districts": "אביב"
-                }
-              },
-              {
-                "id": "jerusalem",
-                "display": "Jerusalem",
-                "filters": {
-                  "details.activity_region_districts": "ירושלים"
-                }
-              },
-              {
-                "id": "haifa",
-                "display": "Haifa",
-                "filters": {
-                  "details.activity_region_districts": "חיפה"
-                }
-              },
-              {
-                "id": "yosh",
-                "display": "Yosh",
-                "filters": {
-                  "details.activity_region_districts": "והשומרון"
-                }
-              }
-            ]
-          },
-          {
-            "id": "creds",
-            "display": "Approvals",
-            "options": [
-              {
-                "id": "all",
-                "display": "All"
-              },
-              {
-                "id": "proper_management",
-                "display": "Proper Management",
-                "filters": {
-                  "details.proper_management": "יש"
-                }
-              },
-              {
-                "id": "article46",
-                "display": "Section 46",
-                "filters": {
-                  "details.has_article_46": "יש"
-                }
-              }
-            ]
-          },
-          {
-            "id": "public_funds",
-            "display": "Public Funds",
-            "options": [
-              {
-                "id": "all",
-                "display": "All"
-              },
-              {
-                "id": "supported",
-                "display": "Recievers of Government Support",
-                "filters": {
-                  "received_amount_supports__gt": 0
-                }
-              },
-              {
-                "id": "contracted",
-                "display": "Government Contracts",
-                "filters": {
-                  "received_amount_contracts__gt": 0
-                }
-              },
-              {
-                "id": "both",
-                "display": "Both",
-                "filters": {
-                  "received_amount_supports__gt": 0,
-                  "received_amount_contracts__gt": 0
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Areas of Activity",
-        "id": "field-of-activity-reports",
-        "types": ["reports"],
-        "defaultTerm": "Active organizations in the area",
-        "placeholder": "Search for active organizations in the area",
-        "filters": {
-          "kind": "fieldofactivity"
-        }
-      },
-      {
-        "name": "Districts",
-        "id": "district-reports",
-        "types": ["reports"],
-        "defaultTerm": "Organizations active in district",
-        "placeholder": "Search for active organizations in the district",
-        "filters": {
-          "kind": "district"
-        }
-      }
-    ],
-    "headerLinks": [
-      {
-        "href": "/about/?theme=socialmap",
-        "title": "Who we are"
-      }
-    ],
+    "disableAuth": true,
+    "euDisclaimer": false,
     "footerLinks": [
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap",
+        "title": "About Us"
+      },
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap#team",
+        "title": "Team"
+      },
+      {
+        "href": "https://next.obudget.org/about?theme=socialmap#privacy",
+        "title": "Privacy Policy"
+      },
       {
         "href": "mailto:info@hasadna.org.il",
         "title": "Contact Us"
       },
       {
         "href": "https://forum.hasadna.org.il/c/eknights/obudget",
-        "title": "Report a problem"
+        "title": "Report an Issue"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey",
-        "title": "Site Code"
+        "title": "Source Code"
       },
       {
         "href": "https://forum.hasadna.org.il/c/eknights/obudget",
-        "title": "Our discussion group"
+        "title": "Our Discussion Group"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
         "title": "API"
       }
     ],
-    "supporterInfos": {
-        "midot": {
-          "name": "מידות",
-          "logo": "midot.svg",
-          "url": "http://www.midot.org.il/"
+    "headerLinks": [
+      {
+        "href": "https://next.obudget.org/about/?theme=socialmap",
+        "title": "מי אנחנו"
+      }
+    ],
+    "sampleSearches": [
+      "ארגונים פעילים בתחום יוזמות עסקיות",
+      "הנוער העובד והלומד",
+      "ארגונים הפעילים במחוז הדרום"
+    ],
+    "searchBarConfig": [
+      {
+        "filterMenu": [
+          {
+            "display": "סוג ארגון",
+            "id": "org_kind",
+            "options": [
+              {
+                "display": "כל הסוגים",
+                "id": "all"
+              },
+              {
+                "display": "עמותות",
+                "filters": {
+                  "details.org_kind": "עמותה"
+                },
+                "id": "associations"
+              },
+              {
+                "display": "חברות לתועלת הציבור",
+                "filters": {
+                  "details.org_kind": "חל\"צ"
+                },
+                "id": "public_good_companies"
+              }
+            ]
+          },
+          {
+            "display": "אזור פעילות",
+            "id": "region",
+            "options": [
+              {
+                "display": "כל המחוזות",
+                "id": "all"
+              },
+              {
+                "display": "מחוז צפון",
+                "filters": {
+                  "details.activity_region_districts": "הצפון"
+                },
+                "id": "north"
+              },
+              {
+                "display": "מחוז מרכז",
+                "filters": {
+                  "details.activity_region_districts": "המרכז"
+                },
+                "id": "center"
+              },
+              {
+                "display": "מחוז דרום",
+                "filters": {
+                  "details.activity_region_districts": "הדרום"
+                },
+                "id": "south"
+              },
+              {
+                "display": "מחוז תל אביב - יפו",
+                "filters": {
+                  "details.activity_region_districts": "אביב"
+                },
+                "id": "tel-aviv"
+              },
+              {
+                "display": "מחוז ירושלים",
+                "filters": {
+                  "details.activity_region_districts": "ירושלים"
+                },
+                "id": "jerusalem"
+              },
+              {
+                "display": "מחוז חיפה",
+                "filters": {
+                  "details.activity_region_districts": "חיפה"
+                },
+                "id": "haifa"
+              },
+              {
+                "display": "מחוז יו״ש",
+                "filters": {
+                  "details.activity_region_districts": "והשומרון"
+                },
+                "id": "yosh"
+              }
+            ]
+          },
+          {
+            "display": "אישורים",
+            "id": "creds",
+            "options": [
+              {
+                "display": "ללא הגבלה",
+                "id": "all"
+              },
+              {
+                "display": "בעלי אישור ניהול תקין",
+                "filters": {
+                  "details.proper_management": "יש"
+                },
+                "id": "proper_management"
+              },
+              {
+                "display": "בעלי אישור בסעיף 46",
+                "filters": {
+                  "details.has_article_46": "יש"
+                },
+                "id": "article46"
+              }
+            ]
+          },
+          {
+            "display": "כספי מדינה",
+            "id": "public_funds",
+            "options": [
+              {
+                "display": "ללא הגבלה",
+                "id": "all"
+              },
+              {
+                "display": "קיבלו תמיכה ממשלתית",
+                "filters": {
+                  "received_amount_supports__gt": 0
+                },
+                "id": "supported"
+              },
+              {
+                "display": "סיפקו שירותים לממשלה",
+                "filters": {
+                  "received_amount_contracts__gt": 0
+                },
+                "id": "contracted"
+              },
+              {
+                "display": "גם וגם",
+                "filters": {
+                  "received_amount_contracts__gt": 0,
+                  "received_amount_supports__gt": 0
+                },
+                "id": "both"
+              }
+            ]
+          }
+        ],
+        "filters": {
+          "kind": "association"
         },
-        "migdal": {
-          "name": "מגדל",
-          "logo": "migdal.svg",
-          "url": "https://www.migdal.co.il/He/MigdalTeam/social_involvment_migdal/Pages/social_inv.aspx"
-        }
-    },    
-    "supporters": ["midot", "migdal"],
-    "euDisclaimer": false
-  },
-  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
-    "siteName": "המפה החברתית"
+        "id": "associations",
+        "name": "עמותות וחל״צ",
+        "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'",
+        "types": [
+          "entities"
+        ]
+      },
+      {
+        "defaultTerm": "ארגונים הפעילים בתחום",
+        "filters": {
+          "kind": "fieldofactivity"
+        },
+        "id": "field-of-activity-reports",
+        "name": "תחומי פעילות",
+        "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
+        "types": [
+          "reports"
+        ]
+      },
+      {
+        "defaultTerm": "ארגונים הפעילים במחוז",
+        "filters": {
+          "kind": "district"
+        },
+        "id": "district-reports",
+        "name": "מחוזות",
+        "placeholder": "חפשו 'ארגונים פעילים במחוז'",
+        "types": [
+          "reports"
+        ]
+      }
+    ],
+    "siteLogo": "socialmap.svg",
+    "siteUrl": "https://socialmap.org.il",
+    "supporterInfos": {
+      "midot": {
+        "logo": "midot.svg",
+        "name": "Midot",
+        "url": "http://www.midot.org.il/"
+      },
+      "migdal": {
+        "logo": "migdal.svg",
+        "name": "Migdal",
+        "url": "https://www.migdal.co.il/He/MigdalTeam/social_involvment_migdal/Pages/social_inv.aspx"
+      }
+    },
+    "supporters": [
+      "midot",
+      "migdal"
+    ],
+    "themeId": "socialmap"
   }
 }
