@@ -41,7 +41,7 @@ if __name__ == '__main__':
     content = ''
     content += 'he:\n'
     for k, v in allkeys():
-        if hebrew(v):
+        if hebrew(v) and '__filters__' not in k:
             content += f'  {k}: {v}\n'
 
     s = requests.Session()
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
         for fn, project, theme in themes():
             fn = str(fn).replace('.he.', f'.{lang}.')
-            for k, v in replace_with(theme, translations, project):
+            for k, v in list(replace_with(theme, translations, project)):
                 parts = k.split('___')[1:]
                 ptr = theme
                 while len(parts) > 1:

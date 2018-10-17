@@ -6,11 +6,11 @@
     "footerLinks": [
       {
         "href": "/about",
-        "title": "אודות"
+        "title": "About Us"
       },
       {
         "href": "/about#team",
-        "title": "הצוות"
+        "title": "The Team"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
@@ -18,37 +18,37 @@
       },
       {
         "href": "https://old.obudget.org",
-        "title": "האתר הישן"
+        "title": "Old Site"
       },
       {
         "href": "mailto:info@hasadna.org.il",
-        "title": "צרו קשר"
+        "title": "Contact Us"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
-        "title": "דווחו על תקלה"
+        "title": "Report an Issue"
       },
       {
         "href": "/about#privacy",
-        "title": "מדיניות פרטיות"
+        "title": "Privacy Policy"
       },
       {
         "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
-        "title": "תרמו לנו"
+        "title": "Donate"
       }
     ],
     "headerLinks": [
       {
         "href": "/about/",
-        "title": "מי אנחנו"
+        "title": "About Us"
       },
       {
         "href": "http://www.hasadna.org.il/%D7%9E%D7%A4%D7%AA%D7%97-%D7%94%D7%AA%D7%A7%D7%A6%D7%99%D7%91/",
-        "title": "הסדנא"
+        "title": "The Public Knowledge Workshop"
       },
       {
         "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
-        "title": "תרמו לנו"
+        "title": "Donate"
       }
     ],
     "searchBarConfig": [
@@ -56,7 +56,7 @@
         "id": "all",
         "main": true,
         "name": "All",
-        "placeholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם...",
+        "placeholder": "Search for anything... budget items, organizations or anything you can think of",
         "types": [
           "all"
         ]
@@ -64,8 +64,8 @@
       {
         "defaultTerm": "משרד",
         "id": "budget",
-        "name": "סעיפים תקציביים",
-        "placeholder": "חפשו שמות של סעיפים ותקנות תקציביות...",
+        "name": "Budget Items",
+        "placeholder": "Search for budget item names...",
         "types": [
           "budget"
         ]
@@ -73,36 +73,36 @@
       {
         "filterMenu": [
           {
-            "display": "סוג הארגון",
+            "display": "Organization Kind",
             "id": "entity_kind",
             "options": [
               {
-                "display": "כל סוגי הארגונים",
+                "display": "All Kinds",
                 "id": "all"
               },
               {
-                "display": "חברות",
+                "display": "Companies",
                 "filters": {
                   "kind": "company"
                 },
                 "id": "companies"
               },
               {
-                "display": "עמותות וחל״צ",
+                "display": "Associations",
                 "filters": {
                   "kind": "association"
                 },
                 "id": "associations"
               },
               {
-                "display": "רשויות מקומיות",
+                "display": "Municipalities",
                 "filters": {
                   "kind": "municipality"
                 },
                 "id": "municipalities"
               },
               {
-                "display": "ארגונים אחרים",
+                "display": "Other Organizations",
                 "filters": {
                   "kind__not": [
                     "company",
@@ -115,29 +115,29 @@
             ]
           },
           {
-            "display": "כספי מדינה",
+            "display": "State Funds",
             "id": "public_funds",
             "options": [
               {
-                "display": "ללא הגבלה",
+                "display": "Unlimited",
                 "id": "all"
               },
               {
-                "display": "קיבלו תמיכה ממשלתית",
+                "display": "Received Government Subsidies",
                 "filters": {
                   "received_amount_supports__gt": 0
                 },
                 "id": "supported"
               },
               {
-                "display": "סיפקו שירותים לממשלה",
+                "display": "Provided Services to the Government",
                 "filters": {
                   "received_amount_contracts__gt": 0
                 },
                 "id": "contracted"
               },
               {
-                "display": "גם וגם",
+                "display": "Both",
                 "filters": {
                   "received_amount_contracts__gt": 0,
                   "received_amount_supports__gt": 0
@@ -148,24 +148,24 @@
           }
         ],
         "id": "entities",
-        "name": "ארגונים",
-        "placeholder": "חפשו פרטים של חברות, עמותות וארגונים אחרים...",
+        "name": "Organizations",
+        "placeholder": "Look up information about companies, associations and other organizations...",
         "types": [
           "entities"
         ]
       },
       {
         "id": "national-budget-changes",
-        "name": "העברות תקציביות",
-        "placeholder": "חפשו פרטים על העברות תקציביות...",
+        "name": "Monetary Transfers",
+        "placeholder": "Look up information regarding monetary transfers...",
         "types": [
           "national-budget-changes"
         ]
       },
       {
         "id": "supports",
-        "name": "תמיכות והעברות",
-        "placeholder": "חפשו פרטים על תמיכות תקציביות...",
+        "name": "Subisidies",
+        "placeholder": "Look up information about government subsidies...",
         "types": [
           "supports"
         ]
@@ -173,15 +173,15 @@
       {
         "filterMenu": [
           {
-            "display": "סוג התהליך",
+            "display": "Process Kind",
             "id": "tender_type",
             "options": [
               {
-                "display": "הכל",
+                "display": "All",
                 "id": "all"
               },
               {
-                "display": "מכרזים",
+                "display": "Tenders",
                 "filters": {
                   "_type": "tenders",
                   "tender_type": [
@@ -192,7 +192,7 @@
                 "id": "tenders"
               },
               {
-                "display": "בקשות פטור ממכרז",
+                "display": "Exemption Requests",
                 "filters": {
                   "_type": "tenders",
                   "tender_type": [
@@ -202,7 +202,7 @@
                 "id": "exemptions"
               },
               {
-                "display": "התקשרויות",
+                "display": "Contracts",
                 "filters": {
                   "_type": "contract-spending"
                 },
@@ -212,15 +212,15 @@
           }
         ],
         "id": "procurement",
-        "name": "מכרזים והתקשרויות",
-        "placeholder": "חפשו פרטים על מכרזים, פשטורים ממכרז והתקשרויות ממשלתיות...",
+        "name": "Tenders and Contracts",
+        "placeholder": "Look up information about tenders, exemptions and contracts..",
         "types": [
           "tenders",
           "contract-spending"
         ]
       }
     ],
-    "searchPlaceholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם..",
+    "searchPlaceholder": "Search for anything... budget items, organizations or anything you can think of",
     "siteLogo": "budgetkey.svg",
     "siteUrl": "https://next.obudget.org"
   }

@@ -42,7 +42,7 @@
     "headerLinks": [
       {
         "href": "https://next.obudget.org/about/?theme=socialmap",
-        "title": "מי אנחנו"
+        "title": "About Us"
       }
     ],
     "sampleSearches": [
@@ -50,26 +50,29 @@
       "הנוער העובד והלומד",
       "ארגונים הפעילים במחוז הדרום"
     ],
+    "sampleSearches[0]": "ארגונים פעילים בתחום יוזמות עסקיות",
+    "sampleSearches[1]": "הנוער העובד והלומד",
+    "sampleSearches[2]": "ארגונים הפעילים במחוז הדרום",
     "searchBarConfig": [
       {
         "filterMenu": [
           {
-            "display": "סוג ארגון",
+            "display": "Organization Kind",
             "id": "org_kind",
             "options": [
               {
-                "display": "כל הסוגים",
+                "display": "All Kinds",
                 "id": "all"
               },
               {
-                "display": "עמותות",
+                "display": "Associations",
                 "filters": {
                   "details.org_kind": "עמותה"
                 },
                 "id": "associations"
               },
               {
-                "display": "חברות לתועלת הציבור",
+                "display": "Public Good Company",
                 "filters": {
                   "details.org_kind": "חל\"צ"
                 },
@@ -78,57 +81,57 @@
             ]
           },
           {
-            "display": "אזור פעילות",
+            "display": "Area of Activity",
             "id": "region",
             "options": [
               {
-                "display": "כל המחוזות",
+                "display": "All Districts",
                 "id": "all"
               },
               {
-                "display": "מחוז צפון",
+                "display": "North District",
                 "filters": {
                   "details.activity_region_districts": "הצפון"
                 },
                 "id": "north"
               },
               {
-                "display": "מחוז מרכז",
+                "display": "Central District",
                 "filters": {
                   "details.activity_region_districts": "המרכז"
                 },
                 "id": "center"
               },
               {
-                "display": "מחוז דרום",
+                "display": "South District",
                 "filters": {
                   "details.activity_region_districts": "הדרום"
                 },
                 "id": "south"
               },
               {
-                "display": "מחוז תל אביב - יפו",
+                "display": "Tel-Aviv District",
                 "filters": {
                   "details.activity_region_districts": "אביב"
                 },
                 "id": "tel-aviv"
               },
               {
-                "display": "מחוז ירושלים",
+                "display": "Jerusalem District",
                 "filters": {
                   "details.activity_region_districts": "ירושלים"
                 },
                 "id": "jerusalem"
               },
               {
-                "display": "מחוז חיפה",
+                "display": "Haifa District",
                 "filters": {
                   "details.activity_region_districts": "חיפה"
                 },
                 "id": "haifa"
               },
               {
-                "display": "מחוז יו״ש",
+                "display": "Judea and Samaria District",
                 "filters": {
                   "details.activity_region_districts": "והשומרון"
                 },
@@ -137,22 +140,22 @@
             ]
           },
           {
-            "display": "אישורים",
+            "display": "Credentials",
             "id": "creds",
             "options": [
               {
-                "display": "ללא הגבלה",
+                "display": "No Restriction",
                 "id": "all"
               },
               {
-                "display": "בעלי אישור ניהול תקין",
+                "display": "Proper Management",
                 "filters": {
                   "details.proper_management": "יש"
                 },
                 "id": "proper_management"
               },
               {
-                "display": "בעלי אישור בסעיף 46",
+                "display": "Article 46",
                 "filters": {
                   "details.has_article_46": "יש"
                 },
@@ -161,29 +164,29 @@
             ]
           },
           {
-            "display": "כספי מדינה",
+            "display": "State Funding",
             "id": "public_funds",
             "options": [
               {
-                "display": "ללא הגבלה",
+                "display": "No Restriction",
                 "id": "all"
               },
               {
-                "display": "קיבלו תמיכה ממשלתית",
+                "display": "Received Subsidies",
                 "filters": {
                   "received_amount_supports__gt": 0
                 },
                 "id": "supported"
               },
               {
-                "display": "סיפקו שירותים לממשלה",
+                "display": "Supplied Services to Government",
                 "filters": {
                   "received_amount_contracts__gt": 0
                 },
                 "id": "contracted"
               },
               {
-                "display": "גם וגם",
+                "display": "Both",
                 "filters": {
                   "received_amount_contracts__gt": 0,
                   "received_amount_supports__gt": 0
@@ -197,8 +200,8 @@
           "kind": "association"
         },
         "id": "associations",
-        "name": "עמותות וחל״צ",
-        "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'",
+        "name": "Associations",
+        "placeholder": "Look up names of associations",
         "types": [
           "entities"
         ]
@@ -209,8 +212,8 @@
           "kind": "fieldofactivity"
         },
         "id": "field-of-activity-reports",
-        "name": "תחומי פעילות",
-        "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
+        "name": "Fields of Activity",
+        "placeholder": "Search for fields of activity...",
         "types": [
           "reports"
         ]
@@ -221,8 +224,8 @@
           "kind": "district"
         },
         "id": "district-reports",
-        "name": "מחוזות",
-        "placeholder": "חפשו 'ארגונים פעילים במחוז'",
+        "name": "Districts",
+        "placeholder": "Search for district names...",
         "types": [
           "reports"
         ]
