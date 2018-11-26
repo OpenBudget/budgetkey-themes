@@ -219,6 +219,10 @@
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
         "title": "API"
+      },
+      {
+        "href": "https://next.obudget.org",
+        "title": "מפתח התקציב"
       }
     ],
     "supporterInfos": {

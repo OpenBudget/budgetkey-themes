@@ -151,6 +151,18 @@
             ]
           }
         ]
+      },
+      {
+        "id": "people",
+        "name": "שמות",
+        "types": ["people"],
+        "placeholder": "חפשו שמות של אנשים מתוך מאגר הנתונים שלנו..."
+      },
+      {
+        "id": "gov_decisions",
+        "name": "החלטות ממשלה",
+        "types": ["gov_decisions"],
+        "placeholder": "חפשו החלטות ופרסומי ממשלה..."
       }
     ],
     "headerLinks": [
