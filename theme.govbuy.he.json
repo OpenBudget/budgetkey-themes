@@ -3,6 +3,7 @@
     "themeId": "govbuy",
     "siteUrl": "https://next.obudget.org/govbuy/",
     "siteLogo": "govbuy.svg",
+    "siteName": "רכש פתוח",
     "searchBarConfig": [
       {
         "name": "הכל",
