@@ -18,13 +18,58 @@
       {
         "id": "budget",
         "name": "סעיפים תקציביים",
+        "description": "סעיפי הוצאות והכנסות המופיעים בתקציב המדינה.",
         "types": ["budget"],
         "placeholder": "חפשו שמות של סעיפים ותקנות תקציביות...",
-        "defaultTerm": "משרד"
+        "defaultTerm": "משרד",
+        "filters": {
+          "func_cls_title_1__not": "הכנסות"
+        },
+        "filterMenu": [
+          {
+            "id": "kind",
+            "display": "סוג הסעיף",
+            "options": [
+              {
+                "id": "ministries",
+                "display": "משרדי ממשלה",
+                "filters": {
+                  "depth": 1
+                }
+              },
+              {
+                "id": "func",
+                "display": "אשכולות נושאיים",
+                "filters": {
+                  "depth__lt": 0
+                }
+              },
+              {
+                "id": "programs",
+                "display": "תכניות תקציביות",
+                "filters": {
+                  "depth": 3
+                }
+              },
+              {
+                "id": "regulations",
+                "display": "רק תקנות תקציביות",
+                "filters": {
+                  "depth": 4
+                }
+              },
+              {
+                "id": "all",
+                "display": "כל רמות התקציב"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "entities",
         "name": "ארגונים",
+        "description": "עמותות, חברות פרטיות וארגונים אחרים אשר מקיימים קשרים כספיים עם הממשלה.",
         "types": ["entities"],
         "placeholder": "חפשו פרטים של חברות, עמותות וארגונים אחרים...",
         "filterMenu": [
@@ -103,20 +148,23 @@
       {
         "id": "national-budget-changes",
         "name": "העברות תקציביות",
+        "description": "שינויים בתקציב המדינה המתרחשים במהלך השנה.",
         "types": ["national-budget-changes"],
         "placeholder": "חפשו פרטים על העברות תקציביות..."
       },
       {
         "id": "supports",
         "name": "תמיכות והעברות",
+        "description": "תמיכות של המדינה בעמותות וגופים נוספים.",
         "types": ["supports"],
         "placeholder": "חפשו פרטים על תמיכות תקציביות..."
       },
       {
         "id": "procurement",
         "name": "מכרזים והתקשרויות",
+        "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים והתקשרויות עם ספקים..",
         "types": ["tenders", "contract-spending"],
-        "placeholder": "חפשו פרטים על מכרזים, פשטורים ממכרז והתקשרויות ממשלתיות...",
+        "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז והתקשרויות ממשלתיות...",
         "filterMenu": [
           {
             "id": "tender_type",
@@ -156,12 +204,14 @@
       {
         "id": "people",
         "name": "שמות",
+        "description": "שמות של פרטים המלוקטים ממקורות המידע השונים שלנו.",
         "types": ["people"],
         "placeholder": "חפשו שמות של אנשים מתוך מאגר הנתונים שלנו..."
       },
       {
         "id": "gov_decisions",
         "name": "החלטות ממשלה",
+        "description": "החלטות ממשלה, מסמכי מדיניות ופרסומים נוספים.",
         "types": ["gov_decisions"],
         "placeholder": "חפשו החלטות ופרסומי ממשלה..."
       }
