@@ -63,6 +63,23 @@
                 }
               }
             ]
+          },
+          {
+            "id": "fiscal-year",
+            "display": "שנת התקציב",
+            "options": [
+              {
+                "id": "all",
+                "display": "כל שנות התקציב"
+              },
+              {
+                "id": "latest",
+                "display": "שנת התקציב הנוכחית",
+                "filters": {
+                  "year": 2019
+                }
+              }
+            ]
           }
         ]
       },
