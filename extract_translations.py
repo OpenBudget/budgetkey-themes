@@ -8,8 +8,14 @@ import os
 API = os.environ['TRANSIFEX_TOKEN']
 HEB=re.compile('[א-ת]')
 
-def themes():
-    for fn in Path('.').glob('*.he.json'):
+KINDS = [
+    # File prefix, Transifex resource, Transifex Description
+    ('theme', 'themes', 'Common Theme Translation'),
+    ('main_page.translations', 'main_page', 'Main Page Translations'),
+]
+
+def sources(kind):
+    for fn in Path('.').glob('{}*.he.json'.format(kind[0])):
         project = str(fn).split('.')[1]
         yield fn, project, json.load(open(fn))
 
@@ -30,24 +36,24 @@ def replace_with(v, replacements, project):
         if k in replacements and replacements[k]:
             yield k, replacements[k]
 
-def allkeys():
-    for _, project, theme in themes():
+def allkeys(kind):
+    for _, project, theme in sources(kind):
         yield from keys(theme, project + '___')
 
 def hebrew(x):
     return HEB.match(x) is not None
 
-if __name__ == '__main__':
+def handle_kind(kind):
     content = ''
     content += 'he:\n'
-    for k, v in allkeys():
+    for k, v in allkeys(kind):
         if hebrew(v) and '__filters__' not in k:
-            content += f'  {k}: {v}\n'
+            content += f'  {json.dumps(k, ensure_ascii=False)}: {json.dumps(v, ensure_ascii=False)}\n'
 
     s = requests.Session()
     s.auth = ('api', API)
 
-    resp = s.get('https://www.transifex.com/api/2/project/budgetkey/resource/themes/')
+    resp = s.get(f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/')
 
     if resp.status_code == requests.codes.ok:
         print('Update file:')
@@ -56,15 +62,16 @@ if __name__ == '__main__':
         )
 
         resp = s.put(
-            'https://www.transifex.com/api/2/project/budgetkey/resource/themes/',
+            f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/content/',
             json=data
-        ) 
+        )
+        print(resp.text)
 
     else:
         print('New file:')
         data = dict(
-            slug='themes',
-            name='Common Theme Translation',
+            slug=kind[1],
+            name=kind[2],
             accept_translations=True,
             i18n_type='YAML_GENERIC',
             content=content,
@@ -74,16 +81,17 @@ if __name__ == '__main__':
             'https://www.transifex.com/api/2/project/budgetkey/resources/',
             json=data
         ) 
-    print(resp.status_code)
+    print(resp.status_code, resp.text)
 
-    for lang in ('en', ):
+    for lang in ('en', 'ar', 'am', 'ru'):
+        print(lang, kind)
         translations = s.get(
-            f'https://www.transifex.com/api/2/project/budgetkey/resource/themes/translation/{lang}/',
+            f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/translation/{lang}/',
             json=data
         ).json()
         translations = yaml.load(translations['content'])['he']
 
-        for fn, project, theme in themes():
+        for fn, project, theme in sources(kind):
             fn = str(fn).replace('.he.', f'.{lang}.')
             for k, v in list(replace_with(theme, translations, project)):
                 parts = k.split('___')[1:]
@@ -98,4 +106,6 @@ if __name__ == '__main__':
                 ptr[parts[0]] = v
             json.dump(theme, open(fn, 'w'), indent=2, sort_keys=True, ensure_ascii=False)
             
-
+if __name__ == '__main__':
+    for kind in KINDS:
+        handle_kind(kind)
