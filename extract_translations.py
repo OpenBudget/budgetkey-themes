@@ -41,7 +41,7 @@ def allkeys(kind):
         yield from keys(theme, project + '___')
 
 def hebrew(x):
-    return HEB.match(x) is not None
+    return HEB.findall(x) is not None
 
 def handle_kind(kind):
     content = ''
@@ -65,7 +65,10 @@ def handle_kind(kind):
             f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/content/',
             json=data
         )
-        print(resp.text)
+        print(resp.status_code)
+        if resp.status_code == requests.codes.ok:
+            print(resp.text)
+            print(content[-1000:])
 
     else:
         print('New file:')
@@ -81,7 +84,7 @@ def handle_kind(kind):
             'https://www.transifex.com/api/2/project/budgetkey/resources/',
             json=data
         ) 
-    print(resp.status_code, resp.text)
+    print(resp.status_code)
 
     for lang in ('en', 'ar', 'am', 'ru'):
         print(lang, kind)
