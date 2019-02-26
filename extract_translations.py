@@ -41,7 +41,7 @@ def allkeys(kind):
         yield from keys(theme, project + '___')
 
 def hebrew(x):
-    return HEB.findall(x) is not None
+    return len(HEB.findall(x)) > 0
 
 def handle_kind(kind):
     content = ''
