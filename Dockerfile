@@ -5,4 +5,4 @@ COPY main_page.*.json /
 
 RUN mkdir -p /themes
 
-ENTRYPOINT ["cp", "-v", "/theme.*.json", "/themes/"]
+ENTRYPOINT ["cp", "-v", "/theme.*.json", "/main_page.*.json", "/themes/"]
