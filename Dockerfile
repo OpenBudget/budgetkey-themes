@@ -1,8 +1,9 @@
 FROM alpine
 
-COPY theme.*.json /
-COPY main_page.*.json /
+RUN mkdir -p prep
+COPY theme.*.json prep/
+COPY main_page.*.json prep/
 
 RUN mkdir -p /themes
 
-ENTRYPOINT ["cp", "-v", "/theme.*.json", "/main_page.*.json", "/themes/"]
+ENTRYPOINT ["cp", "-v", "prep/*", "/themes/"]
