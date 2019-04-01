@@ -12,9 +12,17 @@
     ],
     "searchBarConfig": [
       {
+        "id": "all",
+        "name": "הכל",
+        "types": ["all"],
+        "placeholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם...",
+        "main": true
+      },
+      {
         "name": "עמותות וחל״צ",
         "id": "associations",
         "types": ["entities"],
+        "description": "אילו גופים פועלים במגזר השלישי? כאן תמצאו עמותות וחברות לתועלת הציבור -",
         "placeholder": "חפשו שמות של עמותות או חברות לתועלת הציבור'",
         "filters": {
           "kind": "association"
@@ -164,8 +172,8 @@
       {
         "name": "תחומי פעילות",
         "id": "field-of-activity-reports",
+        "description": "באילו תחומים פועלים במגזר השלישי? כאן תמצאו מידע על כל אחד מתחומי הפעילות -",
         "types": ["reports"],
-        "defaultTerm": "ארגונים הפעילים בתחום",
         "placeholder": "חפשו 'ארגונים פעילים בתחום…'",
         "filters": {
           "kind": "fieldofactivity"
@@ -174,12 +182,55 @@
       {
         "name": "מחוזות",
         "id": "district-reports",
+        "description": "היכן בארץ פועלים במגזר השלישי? כאן תמצאו מידע על כל אחד מהמחוזות בארץ -",
         "types": ["reports"],
-        "defaultTerm": "ארגונים הפעילים במחוז",
         "placeholder": "חפשו 'ארגונים פעילים במחוז'",
         "filters": {
           "kind": "district"
         }
+      },
+      {
+        "name": "הזדמנויות",
+        "id": "opportunities",
+        "description": "הזדמנויות במגזר השלישי? כאן תמצאו קולות קוראים, מכרזים, מבחני תמיכה ועוד!",
+        "types": ["tenders", "calls_for_bids", "support_criteria"],
+        "placeholder": "חפשו הזדמנויות!",
+        "filters": {
+          "tender_type__not": "exemptions"
+        },
+        "filterMenu": [
+          {
+            "id": "kind",
+            "display": "סוג ההזדמנות",
+            "options": [
+              {
+                "id": "all",
+                "display": "הכל"
+              },
+              {
+                "id": "tenders",
+                "display": "מכרזים",
+                "filters": {
+                  "_type": "tenders"
+                }
+              },
+              {
+                "id": "support_criteria",
+                "display": "מבחני תמיכה",
+                "filters": {
+                  "_type": "support_criteria"
+                }
+              },
+              {
+                "id": "calls_for_bids",
+                "display": "קולות קוראים",
+                "filters": {
+                  "_type": "calls_for_bids"
+                }
+              }
+            ]
+          }
+        ]        
       }
     ],
     "headerLinks": [
