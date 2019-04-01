@@ -183,8 +183,41 @@
         "id": "supports",
         "name": "תמיכות והעברות",
         "description": "תמיכות של המדינה בעמותות וגופים נוספים.",
-        "types": ["supports"],
-        "placeholder": "חפשו פרטים על תמיכות תקציביות..."
+        "types": ["supports", "calls_for_bids", "support_criteria"],
+        "placeholder": "חפשו פרטים על תמיכות תקציביות...",
+        "filterMenu": [
+          {
+            "id": "kind",
+            "display": "סוג התהליך",
+            "options": [
+              {
+                "id": "all",
+                "display": "הכל"
+              },
+              {
+                "id": "supports",
+                "display": "תמיכות תקציביות",
+                "filters": {
+                  "_type": "supports"
+                }
+              },
+              {
+                "id": "support_criteria",
+                "display": "מבחני תמיכה",
+                "filters": {
+                  "_type": "support_criteria"
+                }
+              },
+              {
+                "id": "calls_for_bids",
+                "display": "קולות קוראים",
+                "filters": {
+                  "_type": "calls_for_bids"
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "procurement",
