@@ -37,7 +37,7 @@
                 "display": "כל הסוגים"
               },
               {
-                "id": "associations",
+                "id": "only_associations",
                 "display": "עמותות",
                 "filters": {
                   "details.org_kind": "עמותה"
