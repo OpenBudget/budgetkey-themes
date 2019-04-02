@@ -214,6 +214,7 @@
                 "display": "מכרזים",
                 "filters": {
                   "_type": "tenders",
+                  "tender_type__not": "exemptions",
                   "claim_date__gte": "now"
                 }
               },
