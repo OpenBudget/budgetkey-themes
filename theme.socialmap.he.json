@@ -213,21 +213,24 @@
                 "id": "tenders",
                 "display": "מכרזים",
                 "filters": {
-                  "_type": "tenders"
+                  "_type": "tenders",
+                  "claim_date__gte": "now"
                 }
               },
               {
                 "id": "support_criteria",
                 "display": "מבחני תמיכה",
                 "filters": {
-                  "_type": "support_criteria"
+                  "_type": "support_criteria",
+                  "claim_date__gte": "now"
                 }
               },
               {
                 "id": "calls_for_bids",
                 "display": "קולות קוראים",
                 "filters": {
-                  "_type": "calls_for_bids"
+                  "_type": "calls_for_bids",
+                  "claim_date__gte": "now"
                 }
               }
             ]
