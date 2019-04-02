@@ -10,6 +10,7 @@
       "הנוער העובד והלומד",
       "ארגונים הפעילים במחוז הדרום"
     ],
+    "keepDocTypesOrder": true,
     "searchBarConfig": [
       {
         "id": "all",
@@ -196,7 +197,8 @@
         "types": ["tenders", "calls_for_bids", "support_criteria"],
         "placeholder": "חפשו הזדמנויות!",
         "filters": {
-          "tender_type__not": "exemptions"
+          "tender_type__not": "exemptions",
+          "claim_date__gte": "now"
         },
         "filterMenu": [
           {
