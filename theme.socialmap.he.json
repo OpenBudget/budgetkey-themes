@@ -17,7 +17,34 @@
         "name": "הכל",
         "types": ["all"],
         "placeholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם...",
-        "main": true
+        "main": true,
+        "filters": [
+          {
+            "_type": "entities",
+            "kind": "association"
+          },
+          {
+            "_type": "reports"
+          },
+          {
+            "_type": "tenders",
+            "tender_type__not": "exemptions",
+            "claim_date__gte": "now"
+          },
+          {
+            "_type": "tenders",
+            "tender_type__not": "exemptions",
+            "simple_decision": "פתוח"
+          },
+          {
+            "_type": ["calls_for_bids", "support_criteria"],
+            "decision": ["פתוח", "בתוקף"]
+          },
+          {
+            "_type": ["calls_for_bids", "support_criteria"],
+            "claim_date__gte": "now"
+          }          
+        ]
       },
       {
         "name": "עמותות וחל״צ",
@@ -196,10 +223,26 @@
         "description": "הזדמנויות במגזר השלישי? כאן תמצאו קולות קוראים, מכרזים, מבחני תמיכה ועוד!",
         "types": ["tenders", "calls_for_bids", "support_criteria"],
         "placeholder": "חפשו הזדמנויות!",
-        "filters": {
-          "tender_type__not": "exemptions",
-          "claim_date__gte": "now"
-        },
+        "filters": [
+          {
+            "_type": "tenders",
+            "tender_type__not": "exemptions",
+            "claim_date__gte": "now"
+          },
+          {
+            "_type": "tenders",
+            "tender_type__not": "exemptions",
+            "simple_decision": "פתוח"
+          },
+          {
+            "_type": ["calls_for_bids", "support_criteria"],
+            "decision": ["פתוח", "בתוקף"]
+          },
+          {
+            "_type": ["calls_for_bids", "support_criteria"],
+            "claim_date__gte": "now"
+          }          
+        ],
         "filterMenu": [
           {
             "id": "kind",
@@ -213,25 +256,21 @@
                 "id": "tenders",
                 "display": "מכרזים",
                 "filters": {
-                  "_type": "tenders",
-                  "tender_type__not": "exemptions",
-                  "claim_date__gte": "now"
+                    "_type": "tenders"
                 }
               },
               {
                 "id": "support_criteria",
                 "display": "מבחני תמיכה",
                 "filters": {
-                  "_type": "support_criteria",
-                  "claim_date__gte": "now"
+                  "_type": "support_criteria"
                 }
               },
               {
                 "id": "calls_for_bids",
                 "display": "קולות קוראים",
                 "filters": {
-                  "_type": "calls_for_bids",
-                  "claim_date__gte": "now"
+                  "_type": "calls_for_bids"
                 }
               }
             ]
