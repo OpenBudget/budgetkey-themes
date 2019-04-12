@@ -4,7 +4,7 @@
     "siteUrl": "https://socialmap.org.il",
     "siteLogo": "socialmap.svg",
     "siteName": "המפה החברתית",
-    "disableAuth": true,
+    "disableAuth": false,
     "sampleSearches": [
       "ארגונים פעילים בתחום יוזמות עסקיות", 
       "הנוער העובד והלומד",
