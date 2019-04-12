@@ -275,9 +275,42 @@
                 }
               }
             ]
+          },
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              }
+            ] 
           }
-        ]        
-      }
+        ]      }
     ],
     "headerLinks": [
       {
