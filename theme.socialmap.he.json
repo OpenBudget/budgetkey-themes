@@ -223,7 +223,7 @@
         "description": "הזדמנויות במגזר השלישי? כאן תמצאו קולות קוראים, מכרזים, מבחני תמיכה ועוד!",
         "types": ["tenders", "calls_for_bids", "support_criteria"],
         "placeholder": "חפשו הזדמנויות!",
-        "ordering": "__created_at",
+        "ordering": "__date_range_to",
         "filters": [
           {
             "_type": "tenders",
@@ -310,7 +310,8 @@
               }
             ] 
           }
-        ]      }
+        ]      
+      }
     ],
     "headerLinks": [
       {
