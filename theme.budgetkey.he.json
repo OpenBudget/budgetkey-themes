@@ -180,7 +180,7 @@
         "placeholder": "חפשו פרטים על העברות תקציביות..."
       },
       {
-        "id": "supports",
+        "id": "supports_transfers",
         "name": "תמיכות והעברות",
         "description": "תמיכות של המדינה בעמותות וגופים נוספים.",
         "types": ["supports", "calls_for_bids", "support_criteria"],
