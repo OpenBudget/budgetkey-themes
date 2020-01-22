@@ -258,6 +258,40 @@
                 }
               }
             ]
+          },
+          {
+            "id": "status",
+            "display": "סטטוס",
+            "options": [
+              {
+                "id": "all",
+                "display": "הכל"
+              },
+              {
+                "id": "open",
+                "display": "פתוח להגשת הצעות",
+                "filters": [
+                  {
+                    "_type": "tenders",
+                    "tender_type__not": "exemptions",
+                    "claim_date__gte": "now"
+                  },
+                  {
+                    "_type": "tenders",
+                    "tender_type__not": "exemptions",
+                    "simple_decision": "פתוח"
+                  },
+                  {
+                    "_type": "calls_for_bids",
+                    "decision": "פתוח"
+                  },
+                  {
+                    "_type": "calls_for_bids",
+                    "claim_date__gte": "now"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
