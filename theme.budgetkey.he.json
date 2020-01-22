@@ -174,21 +174,21 @@
       },
       {
         "id": "national-budget-changes",
-        "name": "העברות תקציביות",
+        "name": "שינויים תקציביים",
         "description": "שינויים בתקציב המדינה המתרחשים במהלך השנה.",
         "types": ["national-budget-changes"],
-        "placeholder": "חפשו פרטים על העברות תקציביות..."
+        "placeholder": "חפשו פרטים על שינויים תקציביים..."
       },
       {
-        "id": "supports_transfers",
-        "name": "תמיכות והעברות",
-        "description": "תמיכות של המדינה בעמותות וגופים נוספים.",
-        "types": ["supports", "calls_for_bids", "support_criteria"],
-        "placeholder": "חפשו פרטים על תמיכות תקציביות...",
+        "id": "expenses",
+        "name": "הוצאות",
+        "description": "רכש ותמיכות מן המדינה לעמותות, ספקים, רשויות מקומיות וגופים נוספים.",
+        "types": ["supports", "contract-spending"],
+        "placeholder": "חפשו פרטים על הוצאות...",
         "filterMenu": [
           {
             "id": "kind",
-            "display": "סוג התהליך",
+            "display": "סוג ההוצאה",
             "options": [
               {
                 "id": "all",
@@ -202,17 +202,10 @@
                 }
               },
               {
-                "id": "support_criteria",
-                "display": "מבחני תמיכה",
+                "id": "contract",
+                "display": "התקשרויות רכש",
                 "filters": {
-                  "_type": "support_criteria"
-                }
-              },
-              {
-                "id": "calls_for_bids",
-                "display": "קולות קוראים",
-                "filters": {
-                  "_type": "calls_for_bids"
+                  "_type": "contract-spending"
                 }
               }
             ]
@@ -220,11 +213,18 @@
         ]
       },
       {
+        "id": "support_criteria",
+        "name": "מבחני תמיכה",
+        "description": "מבחנים וקריטריונים לתמיכה של המדינה בגופים",
+        "types": ["support_criteria"],
+        "placeholder": "חפשו פרטים על מבחני תמיכה..."
+      },
+      {
         "id": "procurement",
-        "name": "מכרזים והתקשרויות",
-        "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים והתקשרויות עם ספקים..",
-        "types": ["tenders", "contract-spending"],
-        "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז והתקשרויות ממשלתיות...",
+        "name": "מכרזים וקולות קוראים",
+        "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים וקולות קוראים לתמיכות ומיזמים..",
+        "types": ["tenders", "calls_for_bids"],
+        "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז וקולות קוראים...",
         "filterMenu": [
           {
             "id": "tender_type",
@@ -251,10 +251,10 @@
                 }
               },
               {
-                "id": "contracts",
-                "display": "התקשרויות",
+                "id": "calls_for_bids",
+                "display": "קולות קוראים",
                 "filters": {
-                  "_type": "contract-spending"
+                  "_type": "calls_for_bids"
                 }
               }
             ]
@@ -302,10 +302,6 @@
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
         "title": "API"
-      },
-      {
-        "href": "https://old.obudget.org",
-        "title": "האתר הישן"
       },
       {
         "href": "https://next.obudget.org/datapackages/sitemaps/sitemap.html",
