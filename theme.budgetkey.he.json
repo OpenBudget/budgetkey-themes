@@ -308,6 +308,13 @@
         "description": "החלטות ממשלה, מסמכי מדיניות ופרסומים נוספים.",
         "types": ["gov_decisions"],
         "placeholder": "חפשו החלטות ופרסומי ממשלה..."
+      },
+      {
+        "id": "activities",
+        "name": "שירותים ופרויקטים",
+        "description": "פעילויות המבוצעות על ידי המדינה.",
+        "types": ["activities"],
+        "placeholder": "חפשו שמות של שירותים חברתיים או פרויקטים..."
       }
     ],
     "headerLinks": [
