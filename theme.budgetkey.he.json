@@ -314,7 +314,47 @@
         "name": "שירותים ופרויקטים",
         "description": "פעילויות המבוצעות על ידי המדינה.",
         "types": ["activities"],
-        "placeholder": "חפשו שמות של שירותים חברתיים או פרויקטים..."
+        "placeholder": "חפשו שמות של שירותים חברתיים או פרויקטים...",
+        "filterMenu": [
+          {
+            "id": "publisher",
+            "display": "משרד ממשלתי",
+            "options": [
+              {
+                "id": "all",
+                "display": "כולם"
+              },
+              {
+                "id": "health",
+                "display": "משרד הבריאות",
+                "filters": {
+                  "publisher_name": "משרד הבריאות"
+                }
+              },
+              {
+                "id": "education",
+                "display": "משרד החינוך",
+                "filters": {
+                  "publisher_name": "משרד החינוך"
+                }
+              },
+              {
+                "id": "welfare",
+                "display": "משרד הרווחה",
+                "filters": {
+                  "publisher_name": "משרד הרווחה"
+                }
+              },
+              {
+                "id": "immigration",
+                "display": "משרד העליה והקליטה",
+                "filters": {
+                  "publisher_name": "משרד העליה והקליטה"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "headerLinks": [
