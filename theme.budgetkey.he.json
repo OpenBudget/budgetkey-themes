@@ -35,6 +35,13 @@
                 "display": "כל רמות התקציב"
               },
               {
+                "id": "covid19",
+                "display": "קופסאות הקורונה",
+                "filters": {
+                  "covid19_expenses_revised__gt": 0
+                }
+              },
+              {
                 "id": "ministries",
                 "display": "משרדי ממשלה",
                 "filters": {
@@ -76,7 +83,7 @@
                 "id": "latest",
                 "display": "שנת התקציב הנוכחית",
                 "filters": {
-                  "year": 2019
+                  "year": 2020
                 }
               }
             ]
