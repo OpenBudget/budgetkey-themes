@@ -38,7 +38,8 @@
                 "id": "covid19",
                 "display": "קופסאות הקורונה",
                 "filters": {
-                  "covid19_expenses_revised__gt": 0
+                  "covid19_expenses_revised__gt": 0,
+                  "depth": 4
                 }
               },
               {
