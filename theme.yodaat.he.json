@@ -1,0 +1,131 @@
+{
+  "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "themeId": "yodaat",
+    "siteUrl": "https://yodaat.org",
+    "siteLogo": "socialmap.svg",
+    "siteName": "יודעת",
+    "disableAuth": true,
+    "sampleSearches": [],
+    "keepDocTypesOrder": false,
+    "searchBarConfig": [
+      {
+        "id": "all",
+        "name": "הכל",
+        "types": ["support_criteria", "tenders", "calls_for_bids"],
+        "placeholder": "חפשו הזדמנויות בתחום המגדר...",
+        "main": true
+      },
+      {
+        "name": "מכרזים וקולות קוראים",
+        "id": "tenders",
+        "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים וקולות קוראים לתמיכות ומיזמים.",
+        "types": ["tenders", "calls_for_bids"],
+        "placeholder": "חפשו מכרזים וקולות קוראים",
+        "ordering": "__date_range_to",
+        "filterMenu": [
+          {
+            "id": "kind",
+            "display": "סוג ההזדמנות",
+            "options": [
+              {
+                "id": "all",
+                "display": "הכל"
+              },
+              {
+                "id": "tenders",
+                "display": "מכרזים",
+                "filters": {
+                    "_type": "tenders"
+                }
+              },
+              {
+                "id": "calls_for_bids",
+                "display": "קולות קוראים",
+                "filters": {
+                  "_type": "calls_for_bids"
+                }
+              }
+            ]
+          },
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "ללא"
+              },
+              {
+                "id": "closing",
+                "display": "נסגרים בקרוב",
+                "filters": {
+                  "claim_date__lte": "now+1w",
+                  "claim_date__gte": "now"
+                }
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]      
+      },
+      {
+        "name": "מבחני תמיכה",
+        "id": "support_criteria",
+        "description": "מבחנים וקריטריונים לתמיכה של המדינה בגופים",
+        "types": ["support_criteria"],
+        "placeholder": "חפשו מבחני תמיכה",
+        "filterMenu": [
+          {
+            "id": "focused",
+            "display": "חיפוש ממוקד",
+            "options": [
+              {
+                "id": "no",
+                "display": "הכל"
+              },
+              {
+                "id": "new",
+                "display": "חדשים",
+                "filters": {
+                  "rev_created_at__gte": "now-1w"
+                }
+              },
+              {
+                "id": "updated",
+                "display": "התעדכנו לאחרונה",
+                "filters": {
+                  "claim_date__gte": "now+1w",
+                  "last_update_date__gte": "now-1w",
+                  "rev_created_at__lte": "now-1w"
+                }
+              }
+            ] 
+          }
+        ]      
+      }
+    ],
+    "headerLinks": [],
+    "footerLinks": [],
+    "supporterInfos": {},    
+    "supporters": [],
+    "euDisclaimer": false
+  },
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "יודעת"
+  }
+}
