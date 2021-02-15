@@ -7,6 +7,9 @@
     "disableAuth": true,
     "sampleSearches": [],
     "keepDocTypesOrder": false,
+    "searchContext": [
+      "נשים", "מגדר", "פמיניזם", "פמיניסטי", "הריון", "נשים מוכות", "אונס", "זנות", "נערות"
+    ],
     "searchBarConfig": [
       {
         "id": "all",
