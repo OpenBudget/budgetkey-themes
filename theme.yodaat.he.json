@@ -59,8 +59,11 @@
             "display": "חיפוש ממוקד",
             "options": [
               {
-                "id": "no",
-                "display": "ללא"
+                "id": "open",
+                "display": "פתוחים",
+                "filters": {
+                  "claim_date__gte": "now"
+                }
               },
               {
                 "id": "closing",
@@ -84,6 +87,10 @@
                   "claim_date__gte": "now+1w",
                   "last_update_date__gte": "now-1w"
                 }
+              },
+              {
+                "id": "no",
+                "display": "הכל"
               }
             ] 
           }
