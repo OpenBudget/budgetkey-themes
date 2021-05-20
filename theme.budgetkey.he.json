@@ -3,6 +3,7 @@
     "siteName": "מפתח התקציב"
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "themeId": "budgetkey",
     "siteUrl": "https://next.obudget.org",
     "siteLogo": "budgetkey.svg",
     "siteName": "מפתח התקציב",
