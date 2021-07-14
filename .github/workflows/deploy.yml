@@ -20,6 +20,8 @@ jobs:
       with:
         python-version: 3.7
     - name: i18n
+      env:
+        TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
       run: |
         pip install PyYAML requests
         python extract_translations.py
