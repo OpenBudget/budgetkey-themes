@@ -4,88 +4,52 @@
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "soproc",
-    "siteUrl": "https://next.obudget.org",
+    "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main",
     "siteLogo": "soproc.png",
     "siteName": "ספר השירותים החברתיים במיקור חוץ",
-    "searchPlaceholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם..",
+    "searchPlaceholder": "חפשו שם של שירות או מפעיל",
     "searchBarConfig": [
       {
         "id": "all",
         "name": "הכל",
         "types": ["all"],
-        "placeholder": "חפשו הכל... סעיף תקציבי, ארגון, אדם או כל דבר אחר העולה על דעתכם...",
+        "placeholder": "חפשו שם של שירות או מפעיל",
         "main": true
       },
       {
-        "id": "budget",
-        "name": "סעיפים תקציביים",
-        "description": "סעיפי הוצאות המופיעים בתקציב המדינה, משנת 1997 ועד התקציב הנוכחי.",
-        "types": ["budget"],
-        "placeholder": "חפשו שמות של סעיפים ותקנות תקציביות...",
-        "defaultTerm": "משרד",
-        "filters": {
-          "func_cls_title_1__not": "הכנסות"
-        },
+        "id": "activities",
+        "name": "שירותים חברתיים",
+        "description": "שירותים חברתיים במיקור חוץ",
+        "types": ["activities"],
+        "placeholder": "חפשו שמות של שירותים חברתיים...",
         "filterMenu": [
           {
-            "id": "kind",
-            "display": "סוג הסעיף",
+            "id": "office",
+            "display": "משרד",
             "options": [
               {
                 "id": "all",
-                "display": "כל רמות התקציב"
+                "display": "כל המשרדים"
               },
               {
-                "id": "covid19",
-                "display": "קופסאות הקורונה",
+                "id": "welfare",
+                "display": "משרד הרווחה",
                 "filters": {
-                  "covid19_expenses_revised__gt": 0,
-                  "depth": 4
+                  "office": "משרד הרווחה"
                 }
               },
               {
-                "id": "ministries",
-                "display": "משרדי ממשלה",
+                "id": "education",
+                "display": "משרד החינוך",
                 "filters": {
-                  "depth": 1
+                  "office": "משרד החינוך"
                 }
               },
               {
-                "id": "func",
-                "display": "אשכולות נושאיים",
+                "id": "health",
+                "display": "משרד הבריאות",
                 "filters": {
-                  "depth__lt": 0
-                }
-              },
-              {
-                "id": "programs",
-                "display": "תכניות תקציביות",
-                "filters": {
-                  "depth": 3
-                }
-              },
-              {
-                "id": "regulations",
-                "display": "רק תקנות תקציביות",
-                "filters": {
-                  "depth": 4
-                }
-              }
-            ]
-          },
-          {
-            "id": "fiscal-year",
-            "display": "שנת התקציב",
-            "options": [
-              {
-                "id": "all",
-                "display": "כל שנות התקציב"
-              },
-              {
-                "id": "latest",
-                "display": "שנת התקציב הנוכחית",
-                "filters": {
-                  "year": 2020
+                  "office": "משרד הבריאות"
                 }
               }
             ]
@@ -93,29 +57,19 @@
         ]
       },
       {
-        "id": "revenues",
-        "name": "הכנסות המדינה",
-        "description": "סעיפי הכנסות כפי שמופיעים בתקציב המדינה.",
-        "types": ["budget"],
-        "placeholder": "חפשו שמות של סעיפי הכנסה...",
-        "filters": {
-          "func_cls_title_1": "הכנסות"
-        }
-      },
-      {
         "id": "entities",
-        "name": "ארגונים",
-        "description": "עמותות, חברות פרטיות וארגונים אחרים אשר מקיימים קשרים כספיים עם הממשלה.",
+        "name": "מפעילים",
+        "description": "עמותות, חברות פרטיות וארגונים אחרים אשר מפעילים שירותים חברתיים במיקור חוץ.",
         "types": ["entities"],
-        "placeholder": "חפשו פרטים של חברות, עמותות וארגונים אחרים...",
+        "placeholder": "חפשו פרטים של מפעילים...",
         "filterMenu": [
           {
             "id": "entity_kind",
-            "display": "סוג הארגון",
+            "display": "סוג המפעיל",
             "options": [
               {
                 "id": "all",
-                "display": "כל סוגי הארגונים"
+                "display": "כל סוגי המפעילים"
               },
               {
                 "id": "companies",
@@ -140,99 +94,20 @@
               },
               {
                 "id": "other",
-                "display": "ארגונים אחרים",
+                "display": "סוגים אחרים",
                 "filters": {
                   "kind__not": ["company", "association", "municipality"]
                 }
               }
             ]
-          },
-          {
-            "id": "public_funds",
-            "display": "כספי מדינה",
-            "options": [
-              {
-                "id": "all",
-                "display": "ללא הגבלה"
-              },
-              {
-                "id": "supported",
-                "display": "קיבלו תמיכה ממשלתית",
-                "filters": {
-                  "received_amount_supports__gt": 0
-                }
-              },
-              {
-                "id": "contracted",
-                "display": "סיפקו שירותים לממשלה",
-                "filters": {
-                  "received_amount_contracts__gt": 0
-                }
-              },
-              {
-                "id": "both",
-                "display": "גם וגם",
-                "filters": {
-                  "received_amount_supports__gt": 0,
-                  "received_amount_contracts__gt": 0
-                }
-              }
-            ]
           }
         ]
-      },
-      {
-        "id": "national-budget-changes",
-        "name": "שינויים תקציביים",
-        "description": "שינויים בתקציב המדינה המתרחשים במהלך השנה.",
-        "types": ["national-budget-changes"],
-        "placeholder": "חפשו פרטים על שינויים תקציביים..."
-      },
-      {
-        "id": "expenses",
-        "name": "הוצאות",
-        "description": "רכש ותמיכות מן המדינה לעמותות, ספקים, רשויות מקומיות וגופים נוספים.",
-        "types": ["supports", "contract-spending"],
-        "placeholder": "חפשו פרטים על הוצאות...",
-        "filterMenu": [
-          {
-            "id": "kind",
-            "display": "סוג ההוצאה",
-            "options": [
-              {
-                "id": "all",
-                "display": "הכל"
-              },
-              {
-                "id": "supports",
-                "display": "תמיכות תקציביות",
-                "filters": {
-                  "_type": "supports"
-                }
-              },
-              {
-                "id": "contract",
-                "display": "התקשרויות רכש",
-                "filters": {
-                  "_type": "contract-spending"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "support_criteria",
-        "name": "מבחני תמיכה",
-        "description": "מבחנים וקריטריונים לתמיכה של המדינה בגופים",
-        "types": ["support_criteria"],
-        "placeholder": "חפשו פרטים על מבחני תמיכה..."
       },
       {
         "id": "procurement",
         "name": "מכרזים וקולות קוראים",
         "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים וקולות קוראים לתמיכות ומיזמים..",
-        "types": ["tenders", "calls_for_bids"],
+        "types": ["tenders"],
         "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז וקולות קוראים...",
         "filterMenu": [
           {
@@ -257,13 +132,6 @@
                 "filters": {
                   "_type": "tenders",
                   "tender_type": ["exemptions"]
-                }
-              },
-              {
-                "id": "calls_for_bids",
-                "display": "קולות קוראים",
-                "filters": {
-                  "_type": "calls_for_bids"
                 }
               }
             ]
@@ -303,81 +171,16 @@
             ]
           }
         ]
-      },
-      {
-        "id": "people",
-        "name": "שמות",
-        "description": "שמות של פרטים המלוקטים ממקורות המידע השונים שלנו.",
-        "types": ["people"],
-        "placeholder": "חפשו שמות של אנשים מתוך מאגר הנתונים שלנו..."
-      },
-      {
-        "id": "gov_decisions",
-        "name": "החלטות ממשלה",
-        "description": "החלטות ממשלה, מסמכי מדיניות ופרסומים נוספים.",
-        "types": ["gov_decisions"],
-        "placeholder": "חפשו החלטות ופרסומי ממשלה..."
-      },
-      {
-        "id": "activities",
-        "name": "שירותים ופרויקטים",
-        "description": "פעילויות המבוצעות על ידי המדינה.",
-        "types": ["activities"],
-        "placeholder": "חפשו שמות של שירותים חברתיים או פרויקטים...",
-        "filterMenu": [
-          {
-            "id": "publisher",
-            "display": "משרד ממשלתי",
-            "options": [
-              {
-                "id": "all",
-                "display": "כולם"
-              },
-              {
-                "id": "health",
-                "display": "משרד הבריאות",
-                "filters": {
-                  "publisher_name": "משרד הבריאות"
-                }
-              },
-              {
-                "id": "education",
-                "display": "משרד החינוך",
-                "filters": {
-                  "publisher_name": "משרד החינוך"
-                }
-              },
-              {
-                "id": "welfare",
-                "display": "משרד הרווחה",
-                "filters": {
-                  "publisher_name": "משרד הרווחה"
-                }
-              },
-              {
-                "id": "immigration",
-                "display": "משרד העליה והקליטה",
-                "filters": {
-                  "publisher_name": "משרד העליה והקליטה"
-                }
-              }
-            ]
-          }
-        ]
       }
     ],
     "headerLinks": [
       {
-        "href": "/about/",
-        "title": "מי אנחנו"
+        "href": "https://www.gov.il/he/departments/publications/reports/books",
+        "title": "ספרי שירותים בעבר"
       },
       {
-        "href": "http://www.hasadna.org.il/%D7%9E%D7%A4%D7%AA%D7%97-%D7%94%D7%AA%D7%A7%D7%A6%D7%99%D7%91/",
-        "title": "הסדנא"
-      },
-      {
-        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
-        "title": "תרמו לנו"
+        "href": "https://www.gov.il/he/departments/governance-and-social-affairs",
+        "title": "אגף ממשל וחברה במשרד ראש הממשלה"
       }
     ],
     "footerLinks": [
@@ -386,20 +189,16 @@
         "title": "אודות"
       },
       {
-        "href": "/about#team",
-        "title": "הצוות"
-      },
-      {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
         "title": "API"
       },
       {
-        "href": "https://next.obudget.org/datapackages/sitemaps/sitemap.html",
-        "title": "מפת האתר"
-      },
-      {
         "href": "http://www.hasadna.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
         "title": "צרו קשר"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey",
+        "title": "קוד האתר"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
@@ -410,17 +209,22 @@
         "title": "מדיניות פרטיות"
       },
       {
-        "href": "https://www.jgive.com/new/he/ils/donation-targets/3268#donation-modal",
-        "title": "תרמו לנו"
-      },
-      {
-        "href": "https://socialmap.org.il",
-        "title": "המפה החברתית"
-      },
-      {
-        "href": "https://next.obudget.org/govbuy/",
-        "title": "רכש פתוח"
+        "href": "https://next.obudget.org",
+        "title": "מפתח התקציב"
       }
-    ]
+    ],
+    "supporterInfos": {
+      "midot": {
+        "name": "אגף ממשל וחברה במשרד ראש הממשלה",
+        "logo": "gov.svg",
+        "url": "https://www.gov.il/he/departments/governance-and-social-affairs"
+      },
+      "migdal": {
+        "name": "ג׳וינט אלכא",
+        "logo": "joint.png",
+        "url": "https://www.thejoint.org.il/elka/"
+      }
+    },    
+    "supporters": ["gov", "joint"]
   }
 }
