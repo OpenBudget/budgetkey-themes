@@ -22,9 +22,6 @@
         "description": "שירותים חברתיים במיקור חוץ",
         "types": ["activities"],
         "placeholder": "חפשו שמות של שירותים חברתיים...",
-        "filters": {
-          "soproc_supplier": true
-        },
         "filterMenu": [
           {
             "id": "office",
@@ -65,6 +62,9 @@
         "description": "עמותות, חברות פרטיות וארגונים אחרים אשר מפעילים שירותים חברתיים במיקור חוץ.",
         "types": ["entities"],
         "placeholder": "חפשו פרטים של מפעילים...",
+        "filters": {
+          "soproc_supplier": true
+        },
         "filterMenu": [
           {
             "id": "entity_kind",
