@@ -12,9 +12,19 @@
       {
         "id": "all",
         "name": "הכל",
-        "types": ["all"],
+        "types": ["tenders", "entities", "activities"],
         "placeholder": "חפשו שם של שירות או מפעיל",
-        "main": true
+        "main": true,
+        "filters": [
+          {
+            "_type": "tenders",
+            "soproc_tender": true
+          },
+          {
+            "_type": "entities",
+            "soproc_supplier": true
+          }
+        ]
       },
       {
         "id": "activities",
@@ -163,14 +173,6 @@
                     "_type": "tenders",
                     "tender_type__not": "exemptions",
                     "simple_decision": "פתוח"
-                  },
-                  {
-                    "_type": "calls_for_bids",
-                    "decision": "פתוח"
-                  },
-                  {
-                    "_type": "calls_for_bids",
-                    "claim_date__gte": "now"
                   }
                 ]
               }
