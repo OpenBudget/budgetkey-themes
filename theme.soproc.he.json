@@ -112,6 +112,9 @@
         "description": "מכרזים שהמדינה עורכת להפעלת שירותים חברתיים..",
         "types": ["tenders"],
         "placeholder": "חפשו פרטים על מכרזים ופטורים ממכרז...",
+        "filters": {
+          "soproc_tender": true
+        },
         "filterMenu": [
           {
             "id": "tender_type",
