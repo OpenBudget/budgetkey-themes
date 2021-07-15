@@ -22,6 +22,9 @@
         "description": "שירותים חברתיים במיקור חוץ",
         "types": ["activities"],
         "placeholder": "חפשו שמות של שירותים חברתיים...",
+        "filters": {
+          "soproc_supplier": true
+        },
         "filterMenu": [
           {
             "id": "office",
@@ -35,21 +38,21 @@
                 "id": "welfare",
                 "display": "משרד הרווחה",
                 "filters": {
-                  "office": "משרד הרווחה"
+                  "office": "הרווחה"
                 }
               },
               {
                 "id": "education",
                 "display": "משרד החינוך",
                 "filters": {
-                  "office": "משרד החינוך"
+                  "office": "החינוך"
                 }
               },
               {
                 "id": "health",
                 "display": "משרד הבריאות",
                 "filters": {
-                  "office": "משרד הבריאות"
+                  "office": "הבריאות"
                 }
               }
             ]
@@ -105,10 +108,10 @@
       },
       {
         "id": "procurement",
-        "name": "מכרזים וקולות קוראים",
-        "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים וקולות קוראים לתמיכות ומיזמים..",
+        "name": "הליכי רכש",
+        "description": "מכרזים שהמדינה עורכת להפעלת שירותים חברתיים..",
         "types": ["tenders"],
-        "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז וקולות קוראים...",
+        "placeholder": "חפשו פרטים על מכרזים ופטורים ממכרז...",
         "filterMenu": [
           {
             "id": "tender_type",
