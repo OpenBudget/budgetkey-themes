@@ -4,7 +4,7 @@
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "soproc",
-    "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main",
+    "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main?theme=soproc",
     "siteLogo": "soproc.png",
     "siteName": "ספר השירותים החברתיים במיקור חוץ",
     "searchPlaceholder": "חפשו שם של שירות או מפעיל",
