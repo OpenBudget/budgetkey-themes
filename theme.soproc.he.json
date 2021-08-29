@@ -8,13 +8,13 @@
     "siteLogo": "soproc.png",
     "disableAuth": true,
     "siteName": "ספר השירותים החברתיים במיקור חוץ",
-    "searchPlaceholder": "חפשו שם של שירות או מפעיל",
+    "searchPlaceholder": "חפשו שירותים חברתיים, מפעילים והליכי רכש",
     "searchBarConfig": [
       {
         "id": "all",
         "name": "הכל",
         "types": ["tenders", "entities", "activities"],
-        "placeholder": "חפשו שם של שירות או מפעיל",
+        "placeholder": "חפשו שירותים חברתיים, מפעילים והליכי רכש",
         "main": true,
         "filters": [
           {
