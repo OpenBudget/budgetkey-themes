@@ -190,12 +190,16 @@
       {
         "href": "https://www.gov.il/he/departments/governance-and-social-affairs",
         "title": "אגף ממשל וחברה במשרד ראש הממשלה"
+      },
+      {
+        "href": "/about/",
+        "title": "אודות"
       }
     ],
     "footerLinks": [
       {
         "href": "/about",
-        "title": "אודות"
+        "title": "על הפרויקט"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
