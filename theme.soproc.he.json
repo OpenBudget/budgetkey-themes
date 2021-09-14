@@ -1,13 +1,13 @@
 {
   "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
-    "siteName": "ספר השירותים החברתיים במיקור חוץ"
+    "siteName": "מפתח לרכש החברתי"
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "soproc",
     "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main?theme=soproc",
     "siteLogo": "soproc.png",
     "disableAuth": true,
-    "siteName": "ספר השירותים החברתיים במיקור חוץ",
+    "siteName": "מפתח לרכש החברתי",
     "searchPlaceholder": "חפשו שירותים חברתיים, מפעילים והליכי רכש",
     "searchBarConfig": [
       {
@@ -238,6 +238,7 @@
         "url": "https://www.thejoint.org.il/elka/"
       }
     },    
-    "supporters": ["gov", "joint"]
+    "supporters": ["gov", "joint"],
+    "footerText": "רכש חברתי הינו אספקת שירותים חברתיים במיקור חוץ. אתר זה הוא פרי עבודת מיפוי ואיסוף נתונים שנעשית על-ידי שלושת המשרדים החברתיים: בריאות, חינוך, ומשרד הרווחה והשירותים החברתיים, ומשקף את המידע אודות שירותים אלה. האתר הוקם במסגרת מיזם משותף של משרד ראש הממשלה וג'וינט-אלכא, ובשיתוף הסדנא לידע ציבורי. המידע המופיע באתר אינו מהווה תחליף למידע במקורות הראשוניים, ובכל מקרה של סתירה המידע שבמקורות הראשוניים הוא הקובע. הסתמכות על האמור באתר היא באחריות המשתמש בלבד. תאריך עדכון אחרון: ספטמבר 2021."
   }
 }
