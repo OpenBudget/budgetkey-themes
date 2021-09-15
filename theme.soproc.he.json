@@ -184,21 +184,21 @@
     ],
     "headerLinks": [
       {
+        "href": "/about?theme=soproc",
+        "title": "אודות"
+      },
+      {
         "href": "https://www.gov.il/he/departments/publications/reports/books",
         "title": "ספרי שירותים בעבר"
       },
       {
         "href": "https://www.gov.il/he/departments/governance-and-social-affairs",
         "title": "אגף ממשל וחברה במשרד ראש הממשלה"
-      },
-      {
-        "href": "/about/",
-        "title": "אודות"
       }
     ],
     "footerLinks": [
       {
-        "href": "/about",
+        "href": "/about?theme=soproc",
         "title": "על הפרויקט"
       },
       {
@@ -227,12 +227,12 @@
       }
     ],
     "supporterInfos": {
-      "midot": {
+      "gov": {
         "name": "אגף ממשל וחברה במשרד ראש הממשלה",
         "logo": "gov.svg",
         "url": "https://www.gov.il/he/departments/governance-and-social-affairs"
       },
-      "migdal": {
+      "joint": {
         "name": "ג׳וינט אלכא",
         "logo": "joint.png",
         "url": "https://www.thejoint.org.il/elka/"
