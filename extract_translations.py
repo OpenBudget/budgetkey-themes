@@ -5,6 +5,8 @@ import requests
 import yaml
 import os
 
+from yaml.loader import SafeLoader
+
 API = os.environ['TRANSIFEX_TOKEN']
 HEB=re.compile('[א-ת]')
 
@@ -92,7 +94,7 @@ def handle_kind(kind):
             f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/translation/{lang}/',
             json=data
         ).json()
-        translations = yaml.load(translations['content'])['he']
+        translations = yaml.load(translations['content'], Loader=SafeLoader['he']
 
         for fn, project, theme in sources(kind):
             fn = str(fn).replace('.he.', f'.{lang}.')
