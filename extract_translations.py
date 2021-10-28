@@ -94,7 +94,7 @@ def handle_kind(kind):
             f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/translation/{lang}/',
             json=data
         ).json()
-        translations = yaml.load(translations['content'], Loader=SafeLoader['he']
+        translations = yaml.load(translations['content'], Loader=SafeLoader)['he']
 
         for fn, project, theme in sources(kind):
             fn = str(fn).replace('.he.', f'.{lang}.')
