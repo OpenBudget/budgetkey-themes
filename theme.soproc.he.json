@@ -5,7 +5,7 @@
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "soproc",
     "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main?theme=soproc",
-    "siteLogo": "soproc.png",
+    "siteLogo": "soproc.svg",
     "disableAuth": true,
     "siteName": "מפתח לרכש החברתי",
     "searchPlaceholder": "חפשו שירותים חברתיים, מפעילים והליכי רכש",
@@ -192,6 +192,7 @@
         "title": "אגף ממשל וחברה במשרד ראש הממשלה"
       }
     ],
+    "hideFooterHasadnaLogo": true,
     "footerLinks": [
       {
         "href": "/about?theme=soproc",
