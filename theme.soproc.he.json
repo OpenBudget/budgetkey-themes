@@ -4,7 +4,7 @@
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "soproc",
-    "siteUrl": "https://next.obudget.org/i/units/gov_social_service_unit/main?theme=soproc",
+    "siteUrl": "https://www.socialpro.org.il",
     "siteLogo": "soproc.svg",
     "disableAuth": true,
     "siteName": "מפתח לרכש החברתי",
@@ -203,16 +203,12 @@
         "title": "API"
       },
       {
-        "href": "http://www.hasadna.org.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
-        "title": "צרו קשר"
+        "href": "mailto:rehesh.hevrati@pmo.gov.il",
+        "title": "יצירת קשר/דיווח על תקלה"
       },
       {
         "href": "https://github.com/OpenBudget/BudgetKey",
         "title": "קוד האתר"
-      },
-      {
-        "href": "https://github.com/OpenBudget/BudgetKey/issues/new",
-        "title": "דווחו על תקלה"
       },
       {
         "href": "/about#privacy",
