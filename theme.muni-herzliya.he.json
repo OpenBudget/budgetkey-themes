@@ -4,182 +4,18 @@
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
     "themeId": "muni-herzliya",
-    "siteUrl": "https://next.obudget.org/i/org/municipality/500264007",
+    "siteUrl": "https://next.obudget.org/i/org/municipality/500264007?theme=muni-herzliya",
     "siteLogo": "muni-logo-herzliya.svg",
     "disableAuth": true,
     "siteName": "מפתח התקציב העירוני - הרצליה",
     "searchPlaceholder": "חפשו סעיפי תקציב...",
     "searchBarConfig": [
       {
-        "id": "all",
-        "name": "הכל",
-        "types": ["tenders", "entities", "activities"],
-        "placeholder": "חפשו שירותים חברתיים, מפעילים והליכי רכש",
-        "main": true,
-        "filters": [
-          {
-            "_type": "tenders",
-            "soproc_tender": true
-          },
-          {
-            "_type": "entities",
-            "soproc_supplier": true
-          }
-        ]
-      },
-      {
-        "id": "activities",
-        "name": "שירותים חברתיים",
-        "description": "שירותים חברתיים במיקור חוץ",
-        "types": ["activities"],
-        "placeholder": "חפשו שמות של שירותים חברתיים...",
-        "filterMenu": [
-          {
-            "id": "office",
-            "display": "משרד",
-            "options": [
-              {
-                "id": "all",
-                "display": "כל המשרדים"
-              },
-              {
-                "id": "welfare",
-                "display": "משרד הרווחה",
-                "filters": {
-                  "office": "הרווחה"
-                }
-              },
-              {
-                "id": "education",
-                "display": "משרד החינוך",
-                "filters": {
-                  "office": "החינוך"
-                }
-              },
-              {
-                "id": "health",
-                "display": "משרד הבריאות",
-                "filters": {
-                  "office": "הבריאות"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "entities",
-        "name": "מפעילים",
-        "description": "עמותות, חברות פרטיות וארגונים אחרים אשר מפעילים שירותים חברתיים במיקור חוץ.",
-        "types": ["entities"],
-        "placeholder": "חפשו פרטים של מפעילים...",
-        "filters": {
-          "soproc_supplier": true
-        },
-        "filterMenu": [
-          {
-            "id": "entity_kind",
-            "display": "סוג המפעיל",
-            "options": [
-              {
-                "id": "all",
-                "display": "כל סוגי המפעילים"
-              },
-              {
-                "id": "companies",
-                "display": "חברות",
-                "filters": {
-                  "kind": "company"
-                }
-              },
-              {
-                "id": "associations",
-                "display": "עמותות וחל״צ",
-                "filters": {
-                  "kind": "association"
-                }
-              },
-              {
-                "id": "municipalities",
-                "display": "רשויות מקומיות",
-                "filters": {
-                  "kind": "municipality"
-                }
-              },
-              {
-                "id": "other",
-                "display": "סוגים אחרים",
-                "filters": {
-                  "kind__not": ["company", "association", "municipality"]
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "procurement",
-        "name": "הליכי רכש",
-        "description": "מכרזים שהמדינה עורכת להפעלת שירותים חברתיים..",
-        "types": ["tenders"],
-        "placeholder": "חפשו פרטים על מכרזים ופטורים ממכרז...",
-        "filters": {
-          "soproc_tender": true
-        },
-        "filterMenu": [
-          {
-            "id": "tender_type",
-            "display": "סוג התהליך",
-            "options": [
-              {
-                "id": "all",
-                "display": "הכל"
-              },
-              {
-                "id": "tenders",
-                "display": "מכרזים",
-                "filters": {
-                  "_type": "tenders",
-                  "tender_type": ["office", "central"]
-                }
-              },
-              {
-                "id": "exemptions",
-                "display": "בקשות פטור ממכרז",
-                "filters": {
-                  "_type": "tenders",
-                  "tender_type": ["exemptions"]
-                }
-              }
-            ]
-          },
-          {
-            "id": "status",
-            "display": "סטטוס",
-            "options": [
-              {
-                "id": "all",
-                "display": "הכל"
-              },
-              {
-                "id": "open",
-                "display": "פתוח להגשת הצעות",
-                "filters": [
-                  {
-                    "_type": "tenders",
-                    "tender_type__not": "exemptions",
-                    "claim_date__gte": "now"
-                  },
-                  {
-                    "_type": "tenders",
-                    "tender_type__not": "exemptions",
-                    "simple_decision": "פתוח"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "id": "muni_budgets",
+        "name": "סעיפי תקציב",
+        "description": "סעיפים בתקציב הרגיל של הרשות",
+        "types": ["muni_budgets"],
+        "placeholder": "חפשו שמות של סעיפים בתקציב..."
       }
     ],
     "headerLinks": [
@@ -190,6 +26,10 @@
       {
         "href": "https://www.herzliya.muni.il/",
         "title": "אתר העיריה"
+      },
+      {
+        "href": "https://next.obudget.org/i/org/municipality/500264007?theme=muni-herzliya",
+        "title": "חזרה לעמוד הראשי"
       }
     ],
     "hideFooterHasadnaLogo": true,
