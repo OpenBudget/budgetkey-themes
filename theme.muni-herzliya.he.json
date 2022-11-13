@@ -15,7 +15,13 @@
         "name": "סעיפי תקציב",
         "description": "סעיפים בתקציב הרגיל של הרשות",
         "types": ["muni_budgets"],
-        "placeholder": "חפשו שמות של סעיפים בתקציב..."
+        "placeholder": "חפשו שמות של סעיפים בתקציב...",
+        "filters": [
+          {
+            "_type": "muni_budgets",
+            "muni_code": "6400"
+          }
+        ]
       }
     ],
     "headerLinks": [
