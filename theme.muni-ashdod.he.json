@@ -3,8 +3,8 @@
     "siteName": "מפתח התקציב העירוני - אשדוד"
   },
   "BUDGETKEY_NG2_COMPONENTS_THEME": {
-    "themeId": "muni-herzliya",
-    "siteUrl": "https://next.obudget.org/i/org/municipality/500200704?theme=muni-herzliya",
+    "themeId": "muni-ashdod",
+    "siteUrl": "https://next.obudget.org/i/org/municipality/500200704?theme=muni-ashdod",
     "siteLogo": "muni-logo-ashdod.png",
     "disableAuth": true,
     "siteName": "מפתח התקציב העירוני - אשדוד",
@@ -34,7 +34,7 @@
         "title": "אתר העיריה"
       },
       {
-        "href": "https://next.obudget.org/i/org/municipality/500200704?theme=muni-herzliya",
+        "href": "https://next.obudget.org/i/org/municipality/500200704?theme=muni-ashdod",
         "title": "חזרה לעמוד הראשי"
       }
     ],
