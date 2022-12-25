@@ -232,7 +232,7 @@
         "id": "procurement",
         "name": "מכרזים וקולות קוראים",
         "description": "מכרזים שהמדינה עורכת לקניית סחורות ושירותים וקולות קוראים לתמיכות ומיזמים..",
-        "types": ["tenders", "calls_for_bids"],
+        "types": ["tenders", "calls_for_bids", "muni_tenders"],
         "placeholder": "חפשו פרטים על מכרזים, פטורים ממכרז וקולות קוראים...",
         "filterMenu": [
           {
@@ -265,6 +265,13 @@
                 "filters": {
                   "_type": "calls_for_bids"
                 }
+              },
+              {
+                "id": "municipal",
+                "display": "מכרזים מוניציפליים",
+                "filters": {
+                  "_type": "muni_tenders"
+                }
               }
             ]
           },
@@ -296,6 +303,10 @@
                   },
                   {
                     "_type": "calls_for_bids",
+                    "claim_date__gte": "now"
+                  },
+                  {
+                    "_type": "muni_tenders",
                     "claim_date__gte": "now"
                   }
                 ]
