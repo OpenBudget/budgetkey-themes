@@ -1,14 +1,18 @@
 from pathlib import Path
 import json
 import re
-import requests
 import yaml
 import os
 
+import requests
 from yaml.loader import SafeLoader
+
+from transifex.api import transifex_api
 
 API = os.environ['TRANSIFEX_TOKEN']
 HEB=re.compile('[א-ת]')
+
+transifex_api.setup(auth=API)
 
 KINDS = [
     # File prefix, Transifex resource, Transifex Description
@@ -51,50 +55,38 @@ def handle_kind(kind):
     for k, v in allkeys(kind):
         if hebrew(v) and '__filters__' not in k:
             content += f'  {json.dumps(k, ensure_ascii=False)}: {json.dumps(v, ensure_ascii=False)}\n'
+    content = content.encode('utf-8')
 
-    s = requests.Session()
-    s.auth = ('api', API)
+    organization = transifex_api.Organization.filter(slug="the-public-knowledge-workshop")[0]
+    project = transifex_api.Project.filter(organization=organization, slug="budgetkey")[0]
+    resource = transifex_api.Resource.filter(project=project, slug=kind[1])
+    YAML_GENERIC = transifex_api.i18n_formats.filter(organization=organization, name='YAML_GENERIC')[0]
 
-    resp = s.get(f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/')
-
-    if resp.status_code == requests.codes.ok:
-        print('Update file:')
-        data = dict(
-            content=content,
-        )
-
-        resp = s.put(
-            f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/content/',
-            json=data
-        )
-        print(resp.status_code)
-        if resp.status_code == requests.codes.ok:
-            print(resp.text)
-            print(content[-1000:])
+    if len(resource) > 0:
+        resource = resource[0]
+        print('Update file:', resource, resource.attributes)
+        ret = transifex_api.ResourceStringsAsyncUpload.upload(resource=resource, content=content)
+        print('UPDATE', ret)
 
     else:
         print('New file:')
-        data = dict(
-            slug=kind[1],
-            name=kind[2],
-            accept_translations=True,
-            i18n_type='YAML_GENERIC',
-            content=content,
-        )
 
-        resp = s.post(
-            'https://www.transifex.com/api/2/project/budgetkey/resources/',
-            json=data
-        ) 
-    print(resp.status_code)
+        resource = transifex_api.Resource.create(
+            name=kind[2],
+            slug=kind[1],
+            accept_translations=True,
+            i18n_format=YAML_GENERIC,
+            project=project)
+        ret = transifex_api.ResourceStringsAsyncUpload.upload(resource=resource, content=content)
+        print('NEW', ret)
+
 
     for lang in ('en', 'ar', 'am', 'ru'):
         print(lang, kind)
-        translations = s.get(
-            f'https://www.transifex.com/api/2/project/budgetkey/resource/{kind[1]}/translation/{lang}/',
-            json=data
-        ).json()
-        translations = yaml.load(translations['content'], Loader=SafeLoader)['he']
+        language = transifex_api.Language.get(code=lang)
+        url = transifex_api.ResourceTranslationsAsyncDownload.download(resource=resource, language=language)
+        translations = requests.get(url).text
+        translations = yaml.load(translations, Loader=SafeLoader)['he']
 
         for fn, project, theme in sources(kind):
             fn = str(fn).replace('.he.', f'.{lang}.')
