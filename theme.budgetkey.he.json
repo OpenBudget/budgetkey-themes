@@ -186,7 +186,110 @@
         "name": "שינויים תקציביים",
         "description": "שינויים בתקציב המדינה המתרחשים במהלך השנה.",
         "types": ["national-budget-changes"],
-        "placeholder": "חפשו פרטים על שינויים תקציביים..."
+        "placeholder": "חפשו פרטים על שינויים תקציביים...",
+        "filterMenu": [
+          {
+            "id": "fiscal-year",
+            "display": "בשנת התקציב",
+            "options":[
+              {
+                "id": "all",
+                "display": "כל שנות התקציב"
+              },
+              {
+                "id": "2023",
+                "display": "2023",
+                "filters": {
+                  "year": 2023
+                }                
+              },
+              {
+                "id": "2022",
+                "display": "2022",
+                "filters": {
+                  "year": 2022
+                }                
+              },
+              {
+                "id": "2021",
+                "display": "2021",
+                "filters": {
+                  "year": 2021
+                }
+              },
+              {
+                "id": "2020",
+                "display": "2020",
+                "filters": {
+                  "year": 2020
+                }
+              },
+              {
+                "id": "2019",
+                "display": "2019",
+                "filters": {
+                  "year": 2019
+                }
+              },
+              {
+                "id": "2018",
+                "display": "2018",
+                "filters": {
+                  "year": 2018
+                }
+              },
+              {
+                "id": "2017",
+                "display": "2017",
+                "filters": {
+                  "year": 2017
+                }
+              },
+              {
+                "id": "2016",
+                "display": "2016",
+                "filters": {
+                  "year": 2016
+                }
+              },
+              {
+                "id": "2015",
+                "display": "2015",
+                "filters": {
+                  "year": 2015
+                }
+              },
+              {
+                "id": "2014",
+                "display": "2014",
+                "filters": {
+                  "year": 2014
+                }
+              },
+              {
+                "id": "2013",
+                "display": "2013",
+                "filters": {
+                  "year": 2013
+                }
+              },
+              {
+                "id": "2012",
+                "display": "2012",
+                "filters": {
+                  "year": 2012
+                }
+              },
+              {
+                "id": "2011",
+                "display": "2011",
+                "filters": {
+                  "year": 2011
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "expenses",
