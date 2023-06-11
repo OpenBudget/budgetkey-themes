@@ -1,0 +1,65 @@
+{
+  "BUDGETKEY_APP_GENERIC_ITEM_THEME": {
+    "siteName": "מפתח התקציב העירוני - ג׳לג׳וליה"
+  },
+  "BUDGETKEY_NG2_COMPONENTS_THEME": {
+    "themeId": "muni-jaljulye",
+    "siteUrl": "https://next.obudget.org/i/org/municipality/500206271?theme=muni-jaljulye",
+    "disableAuth": true,
+    "siteName": "מפתח התקציב העירוני - ג׳לג׳וליה",
+    "searchPlaceholder": "חפשו סעיפי תקציב...",
+    "searchBarConfig": [
+      {
+        "id": "muni_budgets",
+        "name": "סעיפי תקציב",
+        "description": "סעיפים בתקציב הרגיל של הרשות",
+        "types": ["muni_budgets"],
+        "placeholder": "חפשו שמות של סעיפים בתקציב...",
+        "filters": [
+          {
+            "_type": "muni_budgets",
+            "muni_code": "0627"
+          }
+        ]
+      }
+    ],
+    "headerLinks": [
+      {
+        "href": "/about?theme=muni",
+        "title": "אודות"
+      },
+      {
+        "href": "https://www.jaljulye.muni.il",
+        "title": "אתר המועצה"
+      },
+      {
+        "href": "https://next.obudget.org/i/org/municipality/500264007?theme=muni-herzliya",
+        "title": "חזרה לעמוד הראשי"
+      }
+    ],
+    "hideFooterHasadnaLogo": true,
+    "footerLinks": [
+      {
+        "href": "/about?theme=muni",
+        "title": "על הפרויקט"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey/blob/master/documentation/UsingTheAPI.md",
+        "title": "API"
+      },
+      {
+        "href": "https://github.com/OpenBudget/BudgetKey",
+        "title": "קוד האתר"
+      },
+      {
+        "href": "/about#privacy",
+        "title": "מדיניות פרטיות"
+      },
+      {
+        "href": "https://next.obudget.org",
+        "title": "מפתח התקציב"
+      }
+    ],
+    "footerText": "המידע המופיע באתר אינו מהווה תחליף למידע במקורות הראשוניים, ובכל מקרה של סתירה המידע שבמקורות הראשוניים הוא הקובע. הסתמכות על האמור באתר היא באחריות המשתמש בלבד.<br/>תאריך עדכון אחרון: ספטמבר 2022."
+  }
+}
